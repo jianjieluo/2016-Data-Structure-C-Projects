@@ -9,9 +9,9 @@ Data Structure Homework Easy Projects
 ----
 
 ## Team members
-1. 罗剑杰
-2. 刘俊君
-3. 卢健彬
+1. [罗剑杰](https://github.com/longjj)
+2. [刘俊君](https://github.com/Zeongwan)
+3. [卢健彬](https://github.com/Dashuaiguo)
 4. 卢童杰
 
 ---
