@@ -7,8 +7,8 @@ int main(int argc, char const *argv[]) {
   // construct the orignal car information
   std::queue<int> original_line;
   bool judge = true;
+  std::cout << "Please input the car number and end with -1" << std::endl;
   while (judge) {
-    std::cout << "Please input the car number and end with -1" << std::endl;
     int car_num;
     std::cin >> car_num;
     if (car_num == -1) {
