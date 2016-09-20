@@ -75,7 +75,7 @@ void run() {
     // judge whether it should open a new stack
     bool flag2 = false;
     for (auto it = all_stack.begin(); it != all_stack.end(); ++it) {
-      if (a[head] < it->top() || it->empty()) {
+      if (it->empty() || a[head] < it->top()) {
         it->push(a[head]);
         head++;
         flag2 = true;
