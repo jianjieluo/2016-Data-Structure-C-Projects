@@ -39,20 +39,23 @@ void displayIt(vector<stack<int> > &all_stack, vector<int> &correct) {
 /**
  * use a exception to avoid invaild input
  * @param a the original sequence of the Train
- * @param n the len of the train
+ * @param n the carriages total number
  */
 void checkout(int *a, int n) {
   // temp is used for bucket sort
   int *temp = new int[n];
   double res = 0;
+
   // initilize
   memset(temp, 0, n);
   for (int i = 0; i < n; i++) {
-    temp[a[i]]++;
+    // judge whether the input is overflow or underflow
     if (a[i] <= 0 || a[i] > n) {
       delete[] temp;
       throw res;
     }
+    // judge whether there are some input repeated
+    temp[a[i]]++;
     if (temp[a[i]] > 1) {
       delete[] temp;
       throw res;
@@ -63,7 +66,7 @@ void checkout(int *a, int n) {
 
 void run() {
   // initialize
-  // t is the carriages total numbers
+  // t is the carriages total number
   int t;
   vector<int> correct;
   cout << "The number of carriages : ";
