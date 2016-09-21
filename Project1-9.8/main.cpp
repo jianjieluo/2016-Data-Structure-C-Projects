@@ -1,3 +1,4 @@
+#include <cstring>
 #include <iostream>
 #include <stack>
 #include <vector>
@@ -32,16 +33,20 @@ void displayIt(vector<stack<int> > &all_stack, vector<int> &correct) {
     cout << *i << " ";
   }
   cout << endl;
-  cout << "_________________________________________________________" << endl;
+  cout << "---------------------------------------------" << endl;
 }
+
+/**
+ * use a exception to avoid invaild input
+ * @param a the original sequence of the Train
+ * @param n the len of the train
+ */
 void checkout(int *a, int n) {
   // temp is used for bucket sort
   int *temp = new int[n];
-
-  // here is something question
   double res = 0;
   // initilize
-  for (int i = 0; i < n; i++) temp[i] = 0;
+  memset(temp, 0, n);
   for (int i = 0; i < n; i++) {
     temp[a[i]]++;
     if (a[i] <= 0 || a[i] > n) {
@@ -55,6 +60,7 @@ void checkout(int *a, int n) {
   }
   delete[] temp;
 }
+
 void run() {
   // initialize
   // t is the carriages total numbers
@@ -82,8 +88,11 @@ void run() {
   int should_out = 1;
 
   vector<stack<int> > all_stack;
+  std::cout << "Begin:" << std::endl;
+  int step = 0;
   while (should_out <= t) {
-    displayIt(all_stack, correct);
+    if (step) displayIt(all_stack, correct);
+    std::cout << "Step:" << ++step << std::endl;
 
     // if the head didn't need to push into a stack
     if (a[head] == should_out) {
@@ -107,7 +116,6 @@ void run() {
       }
     }
     if (flag1) {
-      displayIt(all_stack, correct);
       continue;
     }
     // judge whether it should open a new stack
@@ -122,14 +130,12 @@ void run() {
     }
 
     if (flag2) {
-      displayIt(all_stack, correct);
       continue;
     }
 
     stack<int> new_stack;
     new_stack.push(a[head]);
     all_stack.push_back(new_stack);
-
     head++;
   }
   displayIt(all_stack, correct);
