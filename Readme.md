@@ -4,7 +4,7 @@ Data Structure Homework Easy Projects
 > This repository is used to develop SYSU's **2016** Data Structure(C++) Courses' Homework Projects
 
 ---
-> We just use the chances to practice our git commands and learn how to cooperate to develop something on the github at the same time. **So  if you are our classmates, please don't just copy our codes for the current homework without our permission. Thanks a lot.**
+> We just use the chances to practice our git commands and learn how to cooperate to develop something on the github at the same time. **So if you are our classmates, please don't just copy our codes for the current homework without our permission. Thanks a lot.**
 
 ----
 
