@@ -1,5 +1,5 @@
 
-bin/trainSort.out: main.cpp
+bin/trainSort: main.cpp
 	@mkdir -p bin
 	g++ -Wall -g -std=c++11 $^ -o $@
 
