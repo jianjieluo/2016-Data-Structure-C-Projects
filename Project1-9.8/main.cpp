@@ -86,7 +86,7 @@ void run() {
     return;
   }
 
-  // head is the carriages index is going to be dealt with.
+  // head is the carriage's index is going to be dealt with.
   int head = 0;
   int should_out = 1;
 

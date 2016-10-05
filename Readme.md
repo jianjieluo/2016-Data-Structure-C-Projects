@@ -21,4 +21,12 @@ Data Structure Homework Easy Projects
 ## Catalog
 
 1. Project 1: Train Distributing System
-  + It's actually learn how to use stacks to sort some data =_=
+  + It's actually learn how to use stacks to sort some data.
+
+2. Project 2: Simulation of an Airport
+  + write a cpp programming to simulate the runtime situation of an Airport
+  + typically practice our understanding of queue.
+
+----
+
+> If you have any questions, please contact me at luojj26@mail2.sysu.edu.cn.
