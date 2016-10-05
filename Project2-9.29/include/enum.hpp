@@ -1,3 +1,5 @@
+// Write by longj on 2016.10.05
+// The basic queue we use in the project
 #ifndef ENUM_HPP_
 #define ENUM_HPP_
 
