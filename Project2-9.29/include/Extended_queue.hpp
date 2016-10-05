@@ -21,6 +21,7 @@ class Extended_queue {
   // 队满的时候应该是 （rear+1）% maxsize == front
   bool isEmpty() const { return (m_front == m_rear); }
   bool isFull() const { return (m_rear + 1) % maxsize == m_front; }
+  int size() const;
 
   // 基本操作
   Error_code push(const Queue_Element& item);

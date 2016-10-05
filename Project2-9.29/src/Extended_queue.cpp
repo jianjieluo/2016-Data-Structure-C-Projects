@@ -9,6 +9,10 @@ Extended_queue::Extended_queue() : m_front(0), m_rear(0) {
   memset(m_buffer, 0, maxsize);
 }
 
+int Extended_queue::size() const {
+  return (m_rear < m_front) ? (m_rear - m_front + maxsize) : (m_rear - m_front);
+}
+
 Error_code Extended_queue::push(const Queue_Element &item) {
   if (isFull()) {
     return overflow;
