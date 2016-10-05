@@ -19,7 +19,7 @@ Runway::Runway(int limit) {
 Error_code Runway::can_land(const Plane& current) {
   Error_code result;
   if (landing.size() < queue_limit) {
-    result = landing.append(current);
+    result = landing.push(current);
   } else {
     result = fail;
   }
@@ -37,18 +37,18 @@ Error_code Runway::can_land(const Plane& current) {
  * updated*/
 Runway_activity Runway::activity(int time, Plane& moving) {
   Runway_activity in_progersss;
-  if (!landing.empty()) {
+  if (!landing.isEmpty()) {
     landing.retrieve(moving);
     land_wait += time - moving.started();
     num_landings++;
     in_progersss = land;
-    landing.serve();
-  } else if (!takeoff.empty()) {
-    takeoff.retrieve(moving);
+    landing.pop();
+  } else if (!takeoffing.isEmpty()) {
+    takeoffing.retrieve(moving);
     takeoff_wait += time - moving.started();
     num_takeoffs++;
     in_progersss = takeoff;
-    takeoff.serve();
+    takeoffing.pop();
   } else {
     idle_time++;
     in_progersss = idle;
@@ -77,8 +77,8 @@ void Runway::shut_down(int time) const {
        << "Total number of planes that took off" << (num_takeoffs) << endl
        << "Total number of planes that left in landing queue " << landing.size()
        << endl
-       << "Total number of planes that left in takeoff queue " << takeoff.size()
-       << endl;
+       << "Total number of planes that left in takeoff queue "
+       << takeoffing.size() << endl;
   cout << "Percentage of time runway idle "
        << 100.0 * (((float)idle_time) / ((float)time)) << "% " << endl;
   cout << "Average wait in landing queue "

@@ -16,7 +16,7 @@ class Runway {
 
  private:
   Extended_queue landing;
-  Extended_queue takeoff;
+  Extended_queue takeoffing;
   int queue_limit;
   int num_land_requests;
   int num_takeoff_requests;

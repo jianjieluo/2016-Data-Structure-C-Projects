@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <random>
 #include "Plane.cpp"
 #include "Runway.cpp"
 using namespace std;
@@ -16,23 +17,26 @@ void initialize(int &end_time, int &queue_limit, double &arrival_rate,
 int main(int argc, const char *argv[]) {
   int end_time;
   int queue_limit;
+  int flight_number = 0;
   double arrival_rate, departure_rate;
   initialize(end_time, queue_limit, arrival_rate, departure_rate);
-  Random variable;
+  poisson_distribution<int> m_arrival(end_time * arrival_rate),
+      m_depart(end_time * departure_rate);
+  default_random_engine m_engine(time(0));
   Runway small_airport(queue_limit);
   for (int current_time = 0; current_time < end_time; current_time++) {
     // loop over time intervals
 
     // current arrival requests
-    int number_arrivals = variable.poisson(arrival_rate);
+    int number_arrivals = m_arrival(m_engine);
     for (int i = 0; i < number_arrivals; i++) {
-      Plane current_plane(flight_number++, current_time, arrivaling);
+      Plane current_plane(flight_number++, current_time, arriving);
       if (small_airport.can_land(current_plane) != success)
         current_plane.refuse();
     }
 
     // current departure requests
-    int number_departures = variable.poisson(departure_rate);
+    int number_departures = m_depart(m_engine);
     for (int j = 0; j < number_departures; j++) {
       Plane current_plane(flight_number++, current_time, departing);
       if (small_airport.can_depart(current_plane) != success)
@@ -40,17 +44,17 @@ int main(int argc, const char *argv[]) {
     }
 
     Plane moving_plane;
-        switch (small_airport.activity(current_time, moving_plane) {
+    switch (small_airport.activity(current_time, moving_plane)) {
       // let at most one Plane onto the Runway at current_time
       case land:
         moving_plane.land(current_time);
         break;
       case takeoff:
-        moving_plane.takeoff(current_time);
+        moving_plane.fly(current_time);
         break;
       case idle:
         run_idle(current_time);
-        }
+    }
   }
   small_airport.shut_down(end_time);
 }
