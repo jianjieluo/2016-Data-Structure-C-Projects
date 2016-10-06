@@ -28,6 +28,7 @@ Error_code Runway::can_land(const Plane& current) {
     num_land_refused++;
   else
     num_land_requests++;
+  return result;
 }
 
 /* if the landing Queue has entries, its front Plane is copied to the parameter

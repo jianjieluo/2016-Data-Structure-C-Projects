@@ -15,8 +15,8 @@ class Runway {
   void shut_down(int time) const;
 
  private:
-  Extended_queue landing;
-  Extended_queue takeoffing;
+  Extended_queue<Plane> landing;
+  Extended_queue<Plane> takeoffing;
   int queue_limit;
   int num_land_requests;
   int num_takeoff_requests;
