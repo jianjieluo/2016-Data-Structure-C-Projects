@@ -14,6 +14,8 @@ using namespace std;
 
 void initialize(int &end_time, int &queue_limit, double &arrival_rate,
                 double &departure_rate);
+void run_idle(int time);
+
 int main(int argc, const char *argv[]) {
   int end_time;
   int queue_limit;
@@ -82,3 +84,5 @@ void initialize(int &end_time, int &queue_limit, double &arrival_rate,
       cerr << "Satety Warning: This airport will become saturated. " << endl;
   } while (!acceptable);
 }
+
+void run_idle(int time) { cout << time << ": Runway is idle" << endl; }
