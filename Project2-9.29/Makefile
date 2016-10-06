@@ -6,13 +6,13 @@ SRC_DIR := src
 BUILD_DIR := build
 BIN_DIR := bin
 
-BIN_DIR/AirportSimulation: BUILD_DIR/main.o BUILD_DIR/%.o
-	@mkdir -p BIN_DIR
-	$(CC) $(CXXFLAGS) $^ -o $@
+$(BIN_DIR)/AirportSimulation : $(BUILD_DIR)/main.o $(BUILD_DIR)/Plane.o $(BUILD_DIR)/Runway.o $(BUILD_DIR)/Extended_queue.o
+	@mkdir -p $(BIN_DIR)
+	$(CC) $(CXXFLAGS) $(INC) $^ -o $@
 
-BUILD_DIR/%.o: SRC_DIR/%.cpp
-	@mkdir -p BUILD_DIR
-	$(CC) $(CXXFLAGS) -c $< -o $@
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
+	@mkdir -p $(BUILD_DIR)
+	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
 
 clean:
 	@echo "Cleaning..."
