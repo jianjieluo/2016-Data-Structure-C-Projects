@@ -9,6 +9,7 @@
 class Runway {
  public:
   Runway(int limit);
+  ~Runway() {}
   Error_code can_land(const Plane& current);
   Error_code can_depart(const Plane& current);
   Runway_activity activity(int time, Plane& moving);
