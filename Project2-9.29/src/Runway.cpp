@@ -28,6 +28,24 @@ Error_code Runway::can_land(const Plane& current) {
     num_land_refused++;
   else
     num_land_requests++;
+  return result;
+}
+
+// Post: If possible, the Plane current is added to the takeoff Queue; otherwise, an
+// Error_code of overflow is returned. The Runway statistics are update.
+// Uses: class Extended_queue.
+Error_code Runway::can_depart(const Plane &current) {
+  Error_code result;
+  if (takeoffing.size() < queue_limit)
+    result = takeoffing.push(current);
+  else
+    result = fail;
+  num_takeoff_requests++;
+  if (result!=success)
+    num_takeoff_refused++;
+  else
+    num_takeoff_accepted++;
+  return result;
 }
 
 /* if the landing Queue has entries, its front Plane is copied to the parameter

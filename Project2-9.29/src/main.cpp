@@ -8,8 +8,8 @@
 
 #include <iostream>
 #include <random>
-#include "Plane.cpp"
-#include "Runway.cpp"
+// #include "Plane.hpp"
+#include "Runway.hpp"
 using namespace std;
 
 void initialize(int &end_time, int &queue_limit, double &arrival_rate,

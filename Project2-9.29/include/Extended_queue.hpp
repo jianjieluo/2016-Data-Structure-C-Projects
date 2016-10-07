@@ -8,9 +8,8 @@
 // the max number of the content is 500
 const int maxsize = 501;
 
-typedef char Queue_Element;
-
 /*本队列使用的是循环队列，通过给出一个空的位来区分队列满和队列空的情况*/
+template <typename ElementType>
 class Extended_queue {
  public:
   Extended_queue();
@@ -24,19 +23,19 @@ class Extended_queue {
   int size() const;
 
   // 基本操作
-  Error_code push(const Queue_Element& item);
+  Error_code push(const ElementType& item);
   Error_code pop();
   /**
    * Get the front element of the current queue into a reference variabl
    * @param  item a Queue_Element reference to store the front element
    * @return if successful return a success Error_code
    */
-  Error_code retrieve(Queue_Element& item) const;
+  Error_code retrieve(ElementType& item) const;
 
  private:
   int m_front;
   int m_rear;
-  Queue_Element m_buffer[maxsize];
+  ElementType m_buffer[maxsize];
 };
 
 #endif

@@ -12,6 +12,7 @@ class Plane {
    * initial a plane with its number, time and status
    */
   Plane(int flt, int time, Plane_status status);
+  ~Plane() {}
   void refuse() const;
   void land(int time) const;
   void fly(int time) const;
