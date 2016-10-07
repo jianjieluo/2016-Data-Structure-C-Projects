@@ -47,3 +47,8 @@ Error_code Extended_queue<ElementType>::retrieve(ElementType &item) const {
   item = m_buffer[m_front];
   return success;
 }
+
+template <typename ElementType>
+Extended_queue<ElementType>::~Extended_queue() {
+  m_front = m_rear = 0;
+}
