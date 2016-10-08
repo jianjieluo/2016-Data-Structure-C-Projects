@@ -38,4 +38,6 @@ class Extended_queue {
   ElementType m_buffer[maxsize];
 };
 
+#include "Extended_queue.tcc"
+
 #endif
