@@ -1,8 +1,7 @@
 // Write by longj on 2016.10.05
 // The basic queue we use in the project
-
-#include "Extended_queue.hpp"
-#include <cstring>
+// #include <cstring>
+// #include "Extended_queue.hpp"
 /*本队列使用的是循环队列，通过给出一个空的位来区分队列满和队列空的情况*/
 
 template <typename ElementType>

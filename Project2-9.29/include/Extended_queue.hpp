@@ -4,6 +4,7 @@
 #ifndef EXTENDED_QUEUE_HPP_
 #define EXTENDED_QUEUE_HPP_
 
+#include <cstring>
 #include "enum.hpp"
 // the max number of the content is 500
 const int maxsize = 501;
