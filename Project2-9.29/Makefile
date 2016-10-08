@@ -16,6 +16,9 @@ $(BIN_DIR)/AirportSimulation : $(BUILD_DIR)/main.o $(BUILD_DIR)/Plane.o \
 # 	@mkdir -p $(BUILD_DIR)
 # 	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
 
+# It's a very good example to complie th template class with make !!!!!!
+# Since Template is a dynamic distribution,
+# So it should be built with the client code(main.cpp) to be the main.o
 $(BUILD_DIR)/main.o : $(SRC_DIR)/main.cpp $(INC_DIR)/Extended_queue.hpp $(SRC_DIR)/Extended_queue.cpp
 	@mkdir -p $(BUILD_DIR)
 	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
