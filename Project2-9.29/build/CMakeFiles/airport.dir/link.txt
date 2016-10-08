@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++11 -Wall -g   CMakeFiles/airport.dir/src/Plane.cpp.o CMakeFiles/airport.dir/src/main.cpp.o CMakeFiles/airport.dir/src/Runway.cpp.o  -o ../bin/airport 
