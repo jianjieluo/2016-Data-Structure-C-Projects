@@ -16,7 +16,7 @@ $(BIN_DIR)/AirportSimulation : $(BUILD_DIR)/main.o $(BUILD_DIR)/Plane.o \
 # 	@mkdir -p $(BUILD_DIR)
 # 	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
 
-$(BUILD_DIR)/main.o : $(SRC_DIR)/main.cpp $(INC_DIR)/Extended_queue.hpp $(INC_DIR)/Extended_queue.tcc
+$(BUILD_DIR)/main.o : $(SRC_DIR)/main.cpp $(INC_DIR)/Extended_queue.hpp $(SRC_DIR)/Extended_queue.cpp
 	@mkdir -p $(BUILD_DIR)
 	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
 
