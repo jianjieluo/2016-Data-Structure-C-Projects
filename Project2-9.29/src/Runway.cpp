@@ -23,11 +23,11 @@ Error_code Runway::can_land(const Plane& current) {
   } else {
     result = fail;
   }
-  num_takeoff_requests++;
+  num_land_requests++;
   if (result != success)
     num_land_refused++;
   else
-    num_land_requests++;
+    num_land_accepted++;
   return result;
 }
 

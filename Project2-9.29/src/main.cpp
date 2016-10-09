@@ -11,6 +11,7 @@
 // #include "Plane.hpp"
 #include "Extended_queue.hpp"
 #include "Runway.hpp"
+#include "Random.hpp"
 using namespace std;
 
 void initialize(int &end_time, int &queue_limit, double &arrival_rate,
@@ -23,15 +24,13 @@ int main(int argc, const char *argv[]) {
   int flight_number = 0;
   double arrival_rate, departure_rate;
   initialize(end_time, queue_limit, arrival_rate, departure_rate);
-  poisson_distribution<int> m_arrival(end_time * arrival_rate),
-      m_depart(end_time * departure_rate);
-  default_random_engine m_engine(time(0));
+  Random variable(true);
   Runway small_airport(queue_limit);
   for (int current_time = 0; current_time < end_time; current_time++) {
     // loop over time intervals
 
     // current arrival requests
-    int number_arrivals = m_arrival(m_engine);
+    int number_arrivals = variable.poisson(arrival_rate);
     for (int i = 0; i < number_arrivals; i++) {
       Plane current_plane(flight_number++, current_time, arriving);
       if (small_airport.can_land(current_plane) != success)
@@ -39,7 +38,7 @@ int main(int argc, const char *argv[]) {
     }
 
     // current departure requests
-    int number_departures = m_depart(m_engine);
+    int number_departures = variable.poisson(departure_rate);
     for (int j = 0; j < number_departures; j++) {
       Plane current_plane(flight_number++, current_time, departing);
       if (small_airport.can_depart(current_plane) != success)
@@ -67,15 +66,15 @@ void initialize(int &end_time, int &queue_limit, double &arrival_rate,
   cout << "This program simulates an airport with only one runway." << endl
        << "One plane can land or depart in each unit of time." << endl;
   cout << "Up to what number of planes can be waiting to land"
-       << "or take off at any time" << flush;
+       << "or take off at any time" << endl;
   cin >> queue_limit;
-  cout << "How many units of time will the simulation run?" << flush;
+  cout << "How many units of time will the simulation run?" << endl;
   cin >> end_time;
   bool acceptable = false;
   do {
-    cout << "Expected number of arrivals per unit time?" << flush;
+    cout << "Expected number of arrivals per unit time?" << endl;
     cin >> arrival_rate;
-    cout << "Expected number of departures per unit time?" << flush;
+    cout << "Expected number of departures per unit time?" << endl;
     cin >> departure_rate;
     if (arrival_rate < 0.0 || departure_rate < 0.0)
       cerr << "These rates must be nonnegative." << endl;
@@ -86,4 +85,4 @@ void initialize(int &end_time, int &queue_limit, double &arrival_rate,
   } while (!acceptable);
 }
 
-void run_idle(int time) { cout << time << ": Runway is idle" << endl; }
+void run_idle(int time) { cout << time << ": Runway is idle." << endl; }
