@@ -9,6 +9,7 @@
 #include <iostream>
 #include <random>
 // #include "Plane.hpp"
+#include <fstream>
 #include "Extended_queue.hpp"
 #include "Runway.hpp"
 #include "Random.hpp"
@@ -65,16 +66,16 @@ void initialize(int &end_time, int &queue_limit, double &arrival_rate,
                 double &departure_rate) {
   cout << "This program simulates an airport with only one runway." << endl
        << "One plane can land or depart in each unit of time." << endl;
-  cout << "Up to what number of planes can be waiting to land"
-       << "or take off at any time" << endl;
+  cout << "Up to what number of planes can be waiting to land "
+       << "or take off at any time " << endl << "Limit number:\t";
   cin >> queue_limit;
-  cout << "How many units of time will the simulation run?" << endl;
+  cout << "How many units of time will the simulation run?" << endl << "End time: \t";
   cin >> end_time;
   bool acceptable = false;
   do {
-    cout << "Expected number of arrivals per unit time?" << endl;
+    cout << "Expected number of arrivals per unit time?" << endl << "Arrival rate:\t";
     cin >> arrival_rate;
-    cout << "Expected number of departures per unit time?" << endl;
+    cout << "Expected number of departures per unit time?" << endl << "Departure rate:\t";
     cin >> departure_rate;
     if (arrival_rate < 0.0 || departure_rate < 0.0)
       cerr << "These rates must be nonnegative." << endl;
@@ -82,7 +83,8 @@ void initialize(int &end_time, int &queue_limit, double &arrival_rate,
       acceptable = true;
     if (acceptable && arrival_rate + departure_rate > 1.0)
       cerr << "Satety Warning: This airport will become saturated. " << endl;
+    cout << "------------------------------------------------------------------" << endl;
   } while (!acceptable);
 }
 
-void run_idle(int time) { cout << time << ": Runway is idle." << endl; }
+void run_idle(int time) { cout << time << ":\tRunway is idle." << endl; }

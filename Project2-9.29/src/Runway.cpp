@@ -1,5 +1,6 @@
 #include "Runway.hpp"
 #include <iostream>
+#include <fstream>
 using std::cout;
 using std::endl;
 
@@ -74,38 +75,43 @@ Runway_activity Runway::activity(int time, Plane& moving) {
   return in_progersss;
 }
 
-// Runway usage statistics are summarized and printed
+// Runwfstream.h: No such file or directory
+
 void Runway::shut_down(int time) const {
-  cout << "Sumualation has conluded after " << time << " time units." << endl
-       << "Total number of planes processed "
+  std::ofstream s("data/summary.txt");
+  if (!s) cout << 1233333;
+  s    << endl
+       << "Sumualation has conluded after " << time << " time units." << endl
+       << "Total number of planes processed \t\t\t"
        << (num_land_requests + num_takeoff_requests) << endl
-       << "Total number of planes asking to land " << (num_land_requests)
+       << "Total number of planes asking to land \t\t\t" << (num_land_requests)
        << endl
-       << "Total number of planes asking to take off " << (num_takeoff_requests)
+       << "Total number of planes asking to take off \t\t" << (num_takeoff_requests)
        << endl
-       << "Total number of planes accepted for landing " << (num_land_accepted)
+       << "Total number of planes accepted for landing \t\t" << (num_land_accepted)
        << endl
-       << "Total number of planes accepted for takeoff "
+       << "Total number of planes accepted for takeoff \t\t"
        << (num_takeoff_accepted) << endl
-       << "Total number of planes refused for landing " << (num_land_refused)
+       << "Total number of planes refused for landing \t\t" << (num_land_refused)
        << endl
-       << "Total number of planes refused for takeoff" << (num_takeoff_refused)
+       << "Total number of planes refused for takeoff\t\t" << (num_takeoff_refused)
        << endl
-       << "Total number of planes that landed" << (num_landings) << endl
-       << "Total number of planes that took off" << (num_takeoffs) << endl
-       << "Total number of planes that left in landing queue " << landing.size()
+       << "Total number of planes that landed\t\t\t" << (num_landings) << endl
+       << "Total number of planes that took off\t\t\t" << (num_takeoffs) << endl
+       << "Total number of planes that left in landing queue\t" << landing.size()
        << endl
-       << "Total number of planes that left in takeoff queue "
+       << "Total number of planes that left in takeoff queue \t"
        << takeoffing.size() << endl;
-  cout << "Percentage of time runway idle "
+  s    << "Percentage of time runway idle \t\t\t\t"
        << 100.0 * (((float)idle_time) / ((float)time)) << "% " << endl;
-  cout << "Average wait in landing queue "
-       << ((float)land_wait) / ((float)num_landings) << "time units" << endl;
-  cout << "Average wait in takeoff  queue "
-       << ((float)takeoff_wait) / ((float)num_takeoffs) << "time units" << endl;
-  cout << "Average obserbed rate of planes wanting to land"
-       << ((float)num_land_requests) / ((float)time) << "per time unit" << endl;
-  cout << "Average obserbed rate of planes wanting to take off"
-       << ((float)num_takeoff_requests) / ((float)time) << "per time unit"
+  s    << "Average wait in landing queue \t\t\t\t"
+       << ((float)land_wait) / ((float)num_landings) << " time units" << endl;
+  s    << "Average wait in takeoff queue \t\t\t\t"
+       << ((float)takeoff_wait) / ((float)num_takeoffs) << " time units" << endl;
+  s    << "Average obserbed rate of planes wanting to land \t"
+       << ((float)num_land_requests) / ((float)time) << " per time unit" << endl;
+  s    << "Average obserbed rate of planes wanting to take off \t"
+       << ((float)num_takeoff_requests) / ((float)time) << " per time unit"
        << endl;
+  s.close();
 }
