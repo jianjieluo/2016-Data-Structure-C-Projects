@@ -11,7 +11,7 @@ Plane::Plane() : m_flt_num(-1), m_clock_start(-1), m_state(null) {}
  */
 Plane::Plane(int flt, int time, Plane_status status)
     : m_flt_num(flt), m_clock_start(time), m_state(status) {
-  std::cout << "Plane number " << flt << " ready to ";
+  std::cout << "\tPlane No." << flt << " ready to ";
   if (status == arriving)
     std::cout << "land" << std::endl;
   else if (status == departing)
@@ -20,7 +20,7 @@ Plane::Plane(int flt, int time, Plane_status status)
 
 // processes a Plane wantting to use Runway, when Queue is full
 void Plane::refuse() const {
-  std::cout << "Plane number " << m_flt_num;
+  std::cout << "\tPlane No." << m_flt_num;
   if (m_state == arriving)
     std::cout << " directed to another airport" << std::endl;
   else if (m_state == departing)
@@ -30,17 +30,19 @@ void Plane::refuse() const {
 // processes a Plane that is landding at the specified time
 void Plane::land(int time) const {
   int wait = time - m_clock_start;
-  std::cout << time << ":Plane number " << m_flt_num << " landed after " << wait
+  std::cout << time << ":\tPlane No." << m_flt_num << " landed after " << wait
             << " time unit" << ((wait <= 1) ? "" : "s")
             << " in the takeoff queue." << std::endl;
+  // std::cout << "------------------------------------------------------------------" << std::endl;
 }
 
 // processes a Plane that is taking off at the specified time
 void Plane::fly(int time) const {
   int wait = time - m_clock_start;
-  std::cout << time << ":Plane number " << m_flt_num << " took off after "
-            << wait << " time unit" << ((wait <= 1) ? "" : "s")
+  std::cout << time << ":\tPlane No." << m_flt_num << " took off after "
+            << wait << " time unit" << ((wait == 1) ? "" : "s")
             << " in the takeoff queue." << std::endl;
+  // std::cout << "------------------------------------------------------------------" << std::endl;
 }
 
 // return the time that the Plane entered the airport system
