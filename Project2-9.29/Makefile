@@ -8,7 +8,7 @@ BIN_DIR := bin
 INC_DIR := include
 
 $(BIN_DIR)/AirportSimulation : $(BUILD_DIR)/main.o $(BUILD_DIR)/Plane.o \
-															 $(BUILD_DIR)/Runway.o $(BUILD_DIR)/Random.o 
+															 $(BUILD_DIR)/Runway.o $(BUILD_DIR)/Random.o
 	@mkdir -p $(BIN_DIR)
 	$(CC) $(CXXFLAGS) $^ -o $@
 
@@ -41,3 +41,7 @@ $(BUILD_DIR)/Runway.o : $(SRC_DIR)/Runway.cpp
 clean:
 	@echo "Cleaning..."
 	rm -rf $(BUILD_DIR) $(BIN_DIR)
+
+clearData:
+	@echo "Cleaning the data..."
+	rm -f data/summary.txt
