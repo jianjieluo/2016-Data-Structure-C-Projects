@@ -25,7 +25,7 @@ int main(int argc, const char *argv[]) {
   int flight_number = 0;
   double arrival_rate, departure_rate;
   initialize(end_time, queue_limit, arrival_rate, departure_rate);
-  Random variable(true);
+  Random variable(false);
   Runway small_airport(queue_limit);
   for (int current_time = 0; current_time < end_time; current_time++) {
     // loop over time intervals
