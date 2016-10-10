@@ -78,13 +78,13 @@ Runway_activity Runway::activity(int time, Plane& moving) {
 // Runwfstream.h: No such file or directory
 
 void Runway::shut_down(int time) const {
-  std::ofstream s("data/summary.txt");
+    std::ofstream s("../data/summary.txt", std::ios_base::app);
   if (!s) cout << 1233333;
   s    << endl
        << "Sumualation has conluded after " << time << " time units." << endl
        << "Total number of planes processed \t\t\t"
        << (num_land_requests + num_takeoff_requests) << endl
-       << "Total number of planes asking to land \t\t\t" << (num_land_requests)
+       << "Total number of planes asking to land \t\t" << (num_land_requests)
        << endl
        << "Total number of planes asking to take off \t\t" << (num_takeoff_requests)
        << endl
@@ -102,7 +102,7 @@ void Runway::shut_down(int time) const {
        << endl
        << "Total number of planes that left in takeoff queue \t"
        << takeoffing.size() << endl;
-  s    << "Percentage of time runway idle \t\t\t\t"
+  s    << "Percentage of time runway idle \t\t\t"
        << 100.0 * (((float)idle_time) / ((float)time)) << "% " << endl;
   s    << "Average wait in landing queue \t\t\t\t"
        << ((float)land_wait) / ((float)num_landings) << " time units" << endl;

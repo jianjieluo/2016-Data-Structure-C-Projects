@@ -1,18 +1,36 @@
 
 Sumualation has conluded after 1000 time units.
-Total number of planes processed 			917
-Total number of planes asking to land 			437
-Total number of planes asking to take off 		480
-Total number of planes accepted for landing 		437
-Total number of planes accepted for takeoff 		442
+Total number of planes processed 			962
+Total number of planes asking to land 		477
+Total number of planes asking to take off 		485
+Total number of planes accepted for landing 		455
+Total number of planes accepted for takeoff 		373
+Total number of planes refused for landing 		22
+Total number of planes refused for takeoff		112
+Total number of planes that landed			455
+Total number of planes that took off			372
+Total number of planes that left in landing queue	0
+Total number of planes that left in takeoff queue 	1
+Percentage of time runway idle 			17.3% 
+Average wait in landing queue 				0.257143 time units
+Average wait in takeoff queue 				1.69892 time units
+Average obserbed rate of planes wanting to land 	0.477 per time unit
+Average obserbed rate of planes wanting to take off 	0.485 per time unit
+
+Sumualation has conluded after 100 time units.
+Total number of planes processed 			90
+Total number of planes asking to land 		46
+Total number of planes asking to take off 		44
+Total number of planes accepted for landing 		46
+Total number of planes accepted for takeoff 		43
 Total number of planes refused for landing 		0
-Total number of planes refused for takeoff		38
-Total number of planes that landed			437
-Total number of planes that took off			438
+Total number of planes refused for takeoff		1
+Total number of planes that landed			46
+Total number of planes that took off			39
 Total number of planes that left in landing queue	0
 Total number of planes that left in takeoff queue 	4
-Percentage of time runway idle 				12.5% 
-Average wait in landing queue 				0.327231 time units
-Average wait in takeoff queue 				3.71005 time units
-Average obserbed rate of planes wanting to land 	0.437 per time unit
-Average obserbed rate of planes wanting to take off 	0.48 per time unit
+Percentage of time runway idle 			15% 
+Average wait in landing queue 				0.282609 time units
+Average wait in takeoff queue 				2.94872 time units
+Average obserbed rate of planes wanting to land 	0.46 per time unit
+Average obserbed rate of planes wanting to take off 	0.44 per time unit
