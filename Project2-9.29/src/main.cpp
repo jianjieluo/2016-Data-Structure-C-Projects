@@ -28,6 +28,7 @@ int main(int argc, const char *argv[]) {
   Random variable(false);
   Runway Landing_runway(queue_limit); 
   Runway Takingoff_runway(queue_limit);
+  Runway Reserve_runway(queue_limit);
   for (int current_time = 0; current_time < end_time; current_time++) {
     // loop over time intervals
     // current arrival requests
@@ -41,19 +42,34 @@ int main(int argc, const char *argv[]) {
       }
       if(flag) {
         if (Takingoff_runway.takeoffingQueueEmpty()) {
+          if(++i >= number_arrivals) break;
           Plane current_plane_1(flight_number++, current_time, arriving);
-          ++i;
           if (Takingoff_runway.can_land(current_plane_1) != success) {
             current_plane_1.refuse();
             --i;
             --flight_number;
           }
         }
-      } else {
-        if (Takingoff_runway.can_land(current_plane) != success) 
+        if (++i >= number_arrivals) break;
+        Plane current_plane_2(flight_number++, current_time, arriving);
+        if (Reserve_runway.can_land(current_plane_2) != success) {
+          current_plane_2.refuse();
+          --i;
+          --flight_number;
+        }
+      } else if (Takingoff_runway.can_land(current_plane) != success) { // can't land on takingoff runway
           current_plane.refuse();
+          if (Reserve_runway.can_land(current_plane) != success)
+            current_plane.refuse();
+      } else { // land on takingoff runway
+          if (++i >= number_arrivals) break;
+          Plane current_plane_2(flight_number++, current_time, arriving);
+          if (Reserve_runway.can_land(current_plane) != success) {
+            current_plane_2.refuse();
+            --i;
+          --flight_number;
+        } 
       }
-      
     }
 
     // current departure requests
@@ -67,20 +83,31 @@ int main(int argc, const char *argv[]) {
       }
       if (flag) {
         if (Landing_runway.landingQueueEmpty()) {
-          ++j;
+          if (++j >= number_departures) break;
           Plane current_plane_1(flight_number++, current_time, departing);
           if (Landing_runway.can_depart(current_plane) != success) {
             current_plane_1.refuse();
             --j;
             --flight_number;
           }
+          if (Reserve_runway.landingQueueEmpty()) {
+            if (++j >= number_departures) break;
+            Plane current_plane_2(flight_number++, current_time, departing);
+              if (Reserve_runway.can_depart(current_plane_2) != success) {
+                current_plane_2.refuse();
+                --j;
+                --flight_number;
+              }
+          }
         }
-      } else {
-        if (Landing_runway.landingQueueEmpty()) {
+      } else if (Landing_runway.landingQueueEmpty()) {
           if (Landing_runway.can_depart(current_plane) != success) {
             current_plane.refuse();
           }
-        }
+      } else if (Reserve_runway.landingQueueEmpty()) {
+          if (Reserve_runway.can_depart(current_plane) != success) {
+            current_plane.refuse();
+          }
       }
     }
     Plane moving_plane_1;
@@ -106,11 +133,25 @@ int main(int argc, const char *argv[]) {
     switch (Takingoff_runway.activity(current_time, moving_plane_2)) {
       // let at most one Plane onto the Runway at current_time
       case land:
-        if (Takingoff_runway.takeoffingQueueEmpty())
-          moving_plane_1.land(current_time);
+        moving_plane_2.land(current_time);
         break;
       case takeoff:
         moving_plane_2.fly(current_time);
+        break;
+      case idle:
+        run_idle(current_time);
+        break;
+      default : break;
+    }
+    Plane moving_plane_3;
+    cout << "In reserved runway : " << endl;
+    switch (Reserve_runway.activity(current_time, moving_plane_2)) {
+      // let at most one Plane onto the Runway at current_time
+      case land:
+        moving_plane_3.land(current_time);
+        break;
+      case takeoff:
+        moving_plane_3.fly(current_time);
         break;
       case idle:
         run_idle(current_time);
@@ -126,6 +167,10 @@ int main(int argc, const char *argv[]) {
   fl << "The Takingoff Runway : ";
   fl.close();
   Takingoff_runway.shut_down(end_time);
+  fl.open("./data/summary.txt", std::ios_base::app);
+  fl << "The Reserve Runway : ";
+  fl.close();
+  Reserve_runway.shut_down(end_time);
   return 0;
 }
 
