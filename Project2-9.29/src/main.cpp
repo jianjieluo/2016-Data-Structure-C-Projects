@@ -35,20 +35,55 @@ int main(int argc, const char *argv[]) {
     int number_arrivals = variable.poisson(arrival_rate);
     for (int i = 0; i < number_arrivals; i++) {
       Plane current_plane(flight_number++, current_time, arriving);
-      if (Landing_runway.can_land(current_plane) != success)
-        if (!Takingoff_runway.takeoffingQueueEmpty() || Landing_runway.landingQueueFull())
+      bool flag = true;
+      if (Landing_runway.can_land(current_plane) != success){
+        current_plane.refuse();
+        flag = false;
+      }
+      if(flag) {
+        if (Takingoff_runway.takeoffingQueueEmpty()) {
+          Plane current_plane_1(flight_number++, current_time, arriving);
+          ++i;
+          if (Takingoff_runway.can_land(current_plane_1) != success) {
+            current_plane_1.refuse();
+            --i;
+            --flight_number;
+          }
+        }
+      } else {
+        if (Takingoff_runway.can_land(current_plane) != success) 
           current_plane.refuse();
+      }
+      
     }
 
     // current departure requests
     int number_departures = variable.poisson(departure_rate);
     for (int j = 0; j < number_departures; j++) {
       Plane current_plane(flight_number++, current_time, departing);
-      if (Takingoff_runway.can_depart(current_plane) != success)
-        if (!Landing_runway.landingQueueEmpty())
-          current_plane.refuse();
+      bool flag = true;
+      if (Takingoff_runway.can_depart(current_plane) != success){ 
+        current_plane.refuse();
+        flag = false;
+      }
+      if (flag) {
+        if (Landing_runway.landingQueueEmpty()) {
+          ++j;
+          Plane current_plane_1(flight_number++, current_time, departing);
+          if (Landing_runway.can_depart(current_plane) != success) {
+            current_plane_1.refuse();
+            --j;
+            --flight_number;
+          }
+        }
+      } else {
+        if (Landing_runway.landingQueueEmpty()) {
+          if (Landing_runway.can_depart(current_plane) != success) {
+            current_plane.refuse();
+          }
+        }
+      }
     }
-
     Plane moving_plane_1;
     cout << "In landing runway : " << endl;
     switch (Landing_runway.activity(current_time, moving_plane_1)) {
@@ -57,12 +92,14 @@ int main(int argc, const char *argv[]) {
         moving_plane_1.land(current_time);
         break;
       case takeoff:
-          moving_plane.fly(current_time);
+        if (Landing_runway.landingQueueEmpty())
+          moving_plane_1.fly(current_time);
         break;
       case idle:
         run_idle(current_time);
         break;
       default : 
+        cout << "nothing happened.";
         break;
     }
     Plane moving_plane_2;
@@ -70,6 +107,7 @@ int main(int argc, const char *argv[]) {
     switch (Takingoff_runway.activity(current_time, moving_plane_2)) {
       // let at most one Plane onto the Runway at current_time
       case land:
+        if (Takingoff_runway.takeoffingQueueEmpty())
           moving_plane_1.land(current_time);
         break;
       case takeoff:
