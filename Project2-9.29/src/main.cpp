@@ -74,10 +74,10 @@ int main(int argc, const char *argv[]) {
     }
   }
   ofstream fl("./data/summary.txt", std::ios_base::app);
-  fl << "The Landing Runway : ";
+  fl << endl << "The Landing Runway : ";
   fl.close();
   Landing_runway.shut_down(end_time);
-  fl.open("./data/summary.txt");
+  fl.open("./data/summary.txt", std::ios_base::app);
   fl << "The Takingoff Runway : ";
   fl.close();
   Takingoff_runway.shut_down(end_time);
