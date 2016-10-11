@@ -17,7 +17,7 @@ class Runway {
   bool landingQueueFull() const { return landing.isFull();}
   bool takeoffingQueueEmpty() const { return takeoffing.isEmpty();}
   void shut_down(int time) const;
-
+ 
  private:
   Extended_queue<Plane> landing;
   Extended_queue<Plane> takeoffing;

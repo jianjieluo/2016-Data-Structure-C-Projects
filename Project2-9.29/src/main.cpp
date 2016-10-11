@@ -4,7 +4,7 @@
 //
 //  Created by D_ on 16/10/3.
 //  Copyright © 2016年 lucky star. All rights reserved.
-//
+//  To solve question 3
 
 #include <iostream>
 #include <random>
@@ -30,7 +30,6 @@ int main(int argc, const char *argv[]) {
   Runway Takingoff_runway(queue_limit);
   for (int current_time = 0; current_time < end_time; current_time++) {
     // loop over time intervals
-
     // current arrival requests
     int number_arrivals = variable.poisson(arrival_rate);
     for (int i = 0; i < number_arrivals; i++) {
