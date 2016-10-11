@@ -36,7 +36,8 @@ int main(int argc, const char *argv[]) {
     for (int i = 0; i < number_arrivals; i++) {
       Plane current_plane(flight_number++, current_time, arriving);
       if (Landing_runway.can_land(current_plane) != success)
-        current_plane.refuse();
+        if (!Takingoff_runway.takeoffingQueueEmpty() || Landing_runway.landingQueueFull())
+          current_plane.refuse();
     }
 
     // current departure requests
@@ -44,32 +45,39 @@ int main(int argc, const char *argv[]) {
     for (int j = 0; j < number_departures; j++) {
       Plane current_plane(flight_number++, current_time, departing);
       if (Takingoff_runway.can_depart(current_plane) != success)
-        current_plane.refuse();
+        if (!Landing_runway.landingQueueEmpty())
+          current_plane.refuse();
     }
 
     Plane moving_plane_1;
+    cout << "In landing runway : " << endl;
     switch (Landing_runway.activity(current_time, moving_plane_1)) {
       // let at most one Plane onto the Runway at current_time
       case land:
-        cout << "In landing runway : " << endl;
         moving_plane_1.land(current_time);
         break;
-      // case takeoff:
-      //   moving_plane.fly(current_time);
-      //   break;
+      case takeoff:
+          moving_plane.fly(current_time);
+        break;
       case idle:
         run_idle(current_time);
-      default : break;
+        break;
+      default : 
+        break;
     }
     Plane moving_plane_2;
+    cout << "In takingoff runway : " << endl;
     switch (Takingoff_runway.activity(current_time, moving_plane_2)) {
       // let at most one Plane onto the Runway at current_time
+      case land:
+          moving_plane_1.land(current_time);
+        break;
       case takeoff:
-        cout << "In takingoff runway : " << endl;
         moving_plane_2.fly(current_time);
         break;
       case idle:
         run_idle(current_time);
+        break;
       default : break;
     }
   }
