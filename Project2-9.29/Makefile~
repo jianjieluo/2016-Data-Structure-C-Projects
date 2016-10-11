@@ -9,7 +9,7 @@ INC_DIR := include
 
 $(BIN_DIR)/AirportSimulation : $(BUILD_DIR)/main.o $(BUILD_DIR)/Plane.o \
 															 $(BUILD_DIR)/Runway.o $(BUILD_DIR)/Random.o
-	@mkdir -p data
+#	@mkdir -p data
 	@mkdir -p $(BIN_DIR)
 	$(CC) $(CXXFLAGS) $^ -o $@
 
