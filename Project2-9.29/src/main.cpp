@@ -26,7 +26,8 @@ int main(int argc, const char *argv[]) {
   double arrival_rate, departure_rate;
   initialize(end_time, queue_limit, arrival_rate, departure_rate);
   Random variable(false);
-  Runway small_airport(queue_limit);
+  Runway Landing_runway(queue_limit); 
+  Runway Takingoff_runway(queue_limit);
   for (int current_time = 0; current_time < end_time; current_time++) {
     // loop over time intervals
 
@@ -34,7 +35,7 @@ int main(int argc, const char *argv[]) {
     int number_arrivals = variable.poisson(arrival_rate);
     for (int i = 0; i < number_arrivals; i++) {
       Plane current_plane(flight_number++, current_time, arriving);
-      if (small_airport.can_land(current_plane) != success)
+      if (Landing_runway.can_land(current_plane) != success)
         current_plane.refuse();
     }
 
@@ -42,24 +43,45 @@ int main(int argc, const char *argv[]) {
     int number_departures = variable.poisson(departure_rate);
     for (int j = 0; j < number_departures; j++) {
       Plane current_plane(flight_number++, current_time, departing);
-      if (small_airport.can_depart(current_plane) != success)
+      if (Takingoff_runway.can_depart(current_plane) != success)
         current_plane.refuse();
     }
 
-    Plane moving_plane;
-    switch (small_airport.activity(current_time, moving_plane)) {
+    Plane moving_plane_1;
+    switch (Landing_runway.activity(current_time, moving_plane_1)) {
       // let at most one Plane onto the Runway at current_time
       case land:
-        moving_plane.land(current_time);
+        cout << "In landing runway : " << endl;
+        moving_plane_1.land(current_time);
         break;
+      // case takeoff:
+      //   moving_plane.fly(current_time);
+      //   break;
+      case idle:
+        run_idle(current_time);
+      default : break;
+    }
+    Plane moving_plane_2;
+    switch (Takingoff_runway.activity(current_time, moving_plane_2)) {
+      // let at most one Plane onto the Runway at current_time
       case takeoff:
-        moving_plane.fly(current_time);
+        cout << "In takingoff runway : " << endl;
+        moving_plane_2.fly(current_time);
         break;
       case idle:
         run_idle(current_time);
+      default : break;
     }
   }
-  small_airport.shut_down(end_time);
+  ofstream fl("./data/summary.txt", std::ios_base::app);
+  fl << "The Landing Runway : ";
+  fl.close();
+  Landing_runway.shut_down(end_time);
+  fl.open("./data/summary.txt");
+  fl << "The Takingoff Runway : ";
+  fl.close();
+  Takingoff_runway.shut_down(end_time);
+  return 0;
 }
 
 void initialize(int &end_time, int &queue_limit, double &arrival_rate,
