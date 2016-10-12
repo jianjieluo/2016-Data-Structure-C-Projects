@@ -77,6 +77,42 @@ Runway_activity Runway::activity(int time, Plane& moving) {
 
 // Runwfstream.h: No such file or directory
 
+void Runway::before_crash(int time) const {
+    std::ofstream s("../data/summary.txt", std::ios_base::app);
+    if (!s)  { cout << "open the file failed !!!" << endl;
+        exit(0);
+    }
+    s << endl << "This is the situation before the plane crash" << endl
+      << "Total number of planes processed \t\t\t"
+      << (num_land_requests + num_takeoff_requests) << endl
+      << "Total number of planes asking to land \t\t" << (num_land_requests)
+      << endl
+      << "Total number of planes asking to take off \t\t" << (num_takeoff_requests)
+      << endl
+      << "Total number of planes accepted for landing \t\t" << (num_land_accepted)
+      << endl
+      << "Total number of planes accepted for takeoff \t\t"
+      << (num_takeoff_accepted) << endl
+      << "Total number of planes refused for landing \t\t" << (num_land_refused)
+      << endl
+      << "Total number of planes refused for takeoff\t\t" << (num_takeoff_refused)
+      << endl
+      << "Total number of planes that landed\t\t\t" << (num_landings) << endl
+      << "Total number of planes that took off\t\t\t" << (num_takeoffs) << endl
+      << "Percentage of time runway idle \t\t\t"
+      << 100.0 * (((float)idle_time) / ((float)time)) << "% " << endl
+      << "Average wait in landing queue \t\t\t\t"
+      << ((float)land_wait) / ((float)num_landings) << " time units" << endl
+      << "Average wait in takeoff queue \t\t\t\t"
+      << ((float)takeoff_wait) / ((float)num_takeoffs) << " time units" << endl
+      << "Average obserbed rate of planes wanting to land \t"
+      << ((float)num_land_requests) / ((float)time) << " per time unit" << endl
+      << "Average obserbed rate of planes wanting to take off \t"
+      << ((float)num_takeoff_requests) / ((float)time) << " per time unit "
+      << endl;
+    s.close();
+}
+
 void Runway::shut_down(int time) const {
     std::ofstream s("../data/summary.txt", std::ios_base::app);
   if (!s) cout << 1233333;
@@ -111,7 +147,8 @@ void Runway::shut_down(int time) const {
   s    << "Average obserbed rate of planes wanting to land \t"
        << ((float)num_land_requests) / ((float)time) << " per time unit" << endl;
   s    << "Average obserbed rate of planes wanting to take off \t"
-       << ((float)num_takeoff_requests) / ((float)time) << " per time unit"
-       << endl;
+       << ((float)num_takeoff_requests) / ((float)time) << " per time unit" << endl
+       << "The plane that crashed : " << Plane::crash << endl
+    << endl;
   s.close();
 }

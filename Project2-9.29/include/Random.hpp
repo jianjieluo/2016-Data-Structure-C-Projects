@@ -9,7 +9,7 @@ public:
   Random(bool pseudo = true);
   double random_real();
   int poisson(double mean);
-
+  int random_integer(int low, int high);
   ~Random() {}
 private:
   int reseed();

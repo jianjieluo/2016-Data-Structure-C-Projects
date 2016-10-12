@@ -17,6 +17,10 @@ double Random::random_real() {
   return temp / max;
 }
 
+int Random::random_integer(int low, int high) {
+    if (low > high) return random_integer(high, low);
+    else return ((int)((high - low + 1) * random_real())) + low;
+}
 int Random::poisson(double mean) {
   double limit = exp(-mean);
   double product = random_real();

@@ -16,3 +16,1461 @@ Average wait in landing queue 				0.237288 time units
 Average wait in takeoff queue 				6.74286 time units
 Average obserbed rate of planes wanting to land 	0.59 per time unit
 Average obserbed rate of planes wanting to take off 	0.47 per time unit
+
+Sumualation has conluded after 1000 time units.
+Total number of planes processed 			957
+Total number of planes asking to land 		460
+Total number of planes asking to take off 		497
+Total number of planes accepted for landing 		460
+Total number of planes accepted for takeoff 		435
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		62
+Total number of planes that landed			460
+Total number of planes that took off			433
+Total number of planes that left in landing queue	0
+Total number of planes that left in takeoff queue 	2
+Percentage of time runway idle 			10.7% 
+Average wait in landing queue 				0.404348 time units
+Average wait in takeoff queue 				4.06697 time units
+Average obserbed rate of planes wanting to land 	0.46 per time unit
+Average obserbed rate of planes wanting to take off 	0.497 per time unit
+
+Sumualation has conluded after 1000 time units.
+Total number of planes processed 			1038
+Total number of planes asking to land 		475
+Total number of planes asking to take off 		563
+Total number of planes accepted for landing 		475
+Total number of planes accepted for takeoff 		456
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		107
+Total number of planes that landed			474
+Total number of planes that took off			451
+Total number of planes that left in landing queue	1
+Total number of planes that left in takeoff queue 	5
+Percentage of time runway idle 			7.5% 
+Average wait in landing queue 				0.383966 time units
+Average wait in takeoff queue 				4.97783 time units
+Average obserbed rate of planes wanting to land 	0.475 per time unit
+Average obserbed rate of planes wanting to take off 	0.563 per time unit
+The plane that crashed : 0
+
+
+Sumualation has conluded after 1000 time units.
+Total number of planes processed 			1078
+Total number of planes asking to land 		530
+Total number of planes asking to take off 		548
+Total number of planes accepted for landing 		530
+Total number of planes accepted for takeoff 		432
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		116
+Total number of planes that landed			530
+Total number of planes that took off			429
+Total number of planes that left in landing queue	0
+Total number of planes that left in takeoff queue 	3
+Percentage of time runway idle 			4.1% 
+Average wait in landing queue 				0.409434 time units
+Average wait in takeoff queue 				5.84615 time units
+Average obserbed rate of planes wanting to land 	0.53 per time unit
+Average obserbed rate of planes wanting to take off 	0.548 per time unit
+The plane that crashed : 24
+
+
+Sumualation has conluded after 1000 time units.
+Total number of planes processed 			944
+Total number of planes asking to land 		461
+Total number of planes asking to take off 		483
+Total number of planes accepted for landing 		461
+Total number of planes accepted for takeoff 		425
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		58
+Total number of planes that landed			461
+Total number of planes that took off			424
+Total number of planes that left in landing queue	0
+Total number of planes that left in takeoff queue 	1
+Percentage of time runway idle 			11.5% 
+Average wait in landing queue 				0.420824 time units
+Average wait in takeoff queue 				4.4434 time units
+Average obserbed rate of planes wanting to land 	0.461 per time unit
+Average obserbed rate of planes wanting to take off 	0.483 per time unit
+The plane that crashed : 19
+
+
+Sumualation has conluded after 1000 time units.
+Total number of planes processed 			961
+Total number of planes asking to land 		483
+Total number of planes asking to take off 		478
+Total number of planes accepted for landing 		483
+Total number of planes accepted for takeoff 		423
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		55
+Total number of planes that landed			482
+Total number of planes that took off			418
+Total number of planes that left in landing queue	1
+Total number of planes that left in takeoff queue 	5
+Percentage of time runway idle 			10% 
+Average wait in landing queue 				0.545643 time units
+Average wait in takeoff queue 				4.52632 time units
+Average obserbed rate of planes wanting to land 	0.483 per time unit
+Average obserbed rate of planes wanting to take off 	0.478 per time unit
+The plane that crashed : 26
+
+
+Sumualation has conluded after 1000 time units.
+Total number of planes processed 			974
+Total number of planes asking to land 		487
+Total number of planes asking to take off 		487
+Total number of planes accepted for landing 		487
+Total number of planes accepted for takeoff 		409
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		78
+Total number of planes that landed			487
+Total number of planes that took off			407
+Total number of planes that left in landing queue	0
+Total number of planes that left in takeoff queue 	2
+Percentage of time runway idle 			10.6% 
+Average wait in landing queue 				0.398357 time units
+Average wait in takeoff queue 				4.84521 time units
+Average obserbed rate of planes wanting to land 	0.487 per time unit
+Average obserbed rate of planes wanting to take off 	0.487 per time unit
+The plane that crashed : 22
+
+
+Sumualation has conluded after 1000 time units.
+Total number of planes processed 			1040
+Total number of planes asking to land 		558
+Total number of planes asking to take off 		482
+Total number of planes accepted for landing 		557
+Total number of planes accepted for takeoff 		386
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		96
+Total number of planes that landed			557
+Total number of planes that took off			385
+Total number of planes that left in landing queue	0
+Total number of planes that left in takeoff queue 	1
+Percentage of time runway idle 			5.8% 
+Average wait in landing queue 				0.605027 time units
+Average wait in takeoff queue 				6.18182 time units
+Average obserbed rate of planes wanting to land 	0.558 per time unit
+Average obserbed rate of planes wanting to take off 	0.482 per time unit
+The plane that crashed : 38
+
+
+Sumualation has conluded after 1000 time units.
+Total number of planes processed 			950
+Total number of planes asking to land 		508
+Total number of planes asking to take off 		442
+Total number of planes accepted for landing 		507
+Total number of planes accepted for takeoff 		388
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		54
+Total number of planes that landed			507
+Total number of planes that took off			384
+Total number of planes that left in landing queue	0
+Total number of planes that left in takeoff queue 	4
+Percentage of time runway idle 			10.9% 
+Average wait in landing queue 				0.52071 time units
+Average wait in takeoff queue 				4.59896 time units
+Average obserbed rate of planes wanting to land 	0.508 per time unit
+Average obserbed rate of planes wanting to take off 	0.442 per time unit
+The plane that crashed : 28
+
+
+Sumualation has conluded after 1000 time units.
+Total number of planes processed 			977
+Total number of planes asking to land 		481
+Total number of planes asking to take off 		496
+Total number of planes accepted for landing 		480
+Total number of planes accepted for takeoff 		434
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		62
+Total number of planes that landed			480
+Total number of planes that took off			433
+Total number of planes that left in landing queue	0
+Total number of planes that left in takeoff queue 	1
+Percentage of time runway idle 			8.7% 
+Average wait in landing queue 				0.4125 time units
+Average wait in takeoff queue 				4.60277 time units
+Average obserbed rate of planes wanting to land 	0.481 per time unit
+Average obserbed rate of planes wanting to take off 	0.496 per time unit
+The plane that crashed : 10
+
+
+Sumualation has conluded after 1000 time units.
+Total number of planes processed 			863
+Total number of planes asking to land 		599
+Total number of planes asking to take off 		264
+Total number of planes accepted for landing 		595
+Total number of planes accepted for takeoff 		256
+Total number of planes refused for landing 		4
+Total number of planes refused for takeoff		8
+Total number of planes that landed			595
+Total number of planes that took off			254
+Total number of planes that left in landing queue	0
+Total number of planes that left in takeoff queue 	2
+Percentage of time runway idle 			15.1% 
+Average wait in landing queue 				0.719328 time units
+Average wait in takeoff queue 				4.62992 time units
+Average obserbed rate of planes wanting to land 	0.599 per time unit
+Average obserbed rate of planes wanting to take off 	0.264 per time unit
+The plane that crashed : 27
+
+
+This is the situation before the plane crash
+Total number of planes processed 			415
+Total number of planes asking to land 		181
+Total number of planes asking to take off 		234
+Total number of planes accepted for landing 		181
+Total number of planes accepted for takeoff 		196
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		38
+Total number of planes that landed			181
+Total number of planes that took off			194
+Percentage of time runway idle 			10.5263% 
+Average wait in landing queue 				0.38674 time units
+Average wait in takeoff queue 				4.92268 time units
+Average obserbed rate of planes wanting to land 	0.433014 per time unit
+Average obserbed rate of planes wanting to take off 	0.559809 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			445
+Total number of planes asking to land 		199
+Total number of planes asking to take off 		246
+Total number of planes accepted for landing 		199
+Total number of planes accepted for takeoff 		208
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		38
+Total number of planes that landed			197
+Total number of planes that took off			206
+Percentage of time runway idle 			11.2583% 
+Average wait in landing queue 				0.390863 time units
+Average wait in takeoff queue 				4.8835 time units
+Average obserbed rate of planes wanting to land 	0.439294 per time unit
+Average obserbed rate of planes wanting to take off 	0.543046 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			466
+Total number of planes asking to land 		210
+Total number of planes asking to take off 		256
+Total number of planes accepted for landing 		210
+Total number of planes accepted for takeoff 		217
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		39
+Total number of planes that landed			210
+Total number of planes that took off			212
+Percentage of time runway idle 			10.8051% 
+Average wait in landing queue 				0.414286 time units
+Average wait in takeoff queue 				4.90566 time units
+Average obserbed rate of planes wanting to land 	0.444915 per time unit
+Average obserbed rate of planes wanting to take off 	0.542373 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			474
+Total number of planes asking to land 		216
+Total number of planes asking to take off 		258
+Total number of planes accepted for landing 		216
+Total number of planes accepted for takeoff 		219
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		39
+Total number of planes that landed			215
+Total number of planes that took off			216
+Percentage of time runway idle 			10.6029% 
+Average wait in landing queue 				0.409302 time units
+Average wait in takeoff queue 				4.99074 time units
+Average obserbed rate of planes wanting to land 	0.449064 per time unit
+Average obserbed rate of planes wanting to take off 	0.536383 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			700
+Total number of planes asking to land 		326
+Total number of planes asking to take off 		374
+Total number of planes accepted for landing 		326
+Total number of planes accepted for takeoff 		327
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		47
+Total number of planes that landed			326
+Total number of planes that took off			324
+Percentage of time runway idle 			9.98613% 
+Average wait in landing queue 				0.346626 time units
+Average wait in takeoff queue 				4.65432 time units
+Average obserbed rate of planes wanting to land 	0.45215 per time unit
+Average obserbed rate of planes wanting to take off 	0.518724 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			740
+Total number of planes asking to land 		347
+Total number of planes asking to take off 		393
+Total number of planes accepted for landing 		347
+Total number of planes accepted for takeoff 		343
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		50
+Total number of planes that landed			346
+Total number of planes that took off			342
+Percentage of time runway idle 			9.84252% 
+Average wait in landing queue 				0.349711 time units
+Average wait in takeoff queue 				4.65205 time units
+Average obserbed rate of planes wanting to land 	0.455381 per time unit
+Average obserbed rate of planes wanting to take off 	0.515748 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			889
+Total number of planes asking to land 		422
+Total number of planes asking to take off 		467
+Total number of planes accepted for landing 		422
+Total number of planes accepted for takeoff 		405
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		62
+Total number of planes that landed			420
+Total number of planes that took off			405
+Percentage of time runway idle 			10.0437% 
+Average wait in landing queue 				0.357143 time units
+Average wait in takeoff queue 				4.6642 time units
+Average obserbed rate of planes wanting to land 	0.460699 per time unit
+Average obserbed rate of planes wanting to take off 	0.509825 per time unit 
+
+Sumualation has conluded after 1000 time units.
+Total number of planes processed 			959
+Total number of planes asking to land 		466
+Total number of planes asking to take off 		493
+Total number of planes accepted for landing 		466
+Total number of planes accepted for takeoff 		431
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		62
+Total number of planes that landed			466
+Total number of planes that took off			431
+Total number of planes that left in landing queue	0
+Total number of planes that left in takeoff queue 	0
+Percentage of time runway idle 			10.3% 
+Average wait in landing queue 				0.369099 time units
+Average wait in takeoff queue 				4.58933 time units
+Average obserbed rate of planes wanting to land 	0.466 per time unit
+Average obserbed rate of planes wanting to take off 	0.493 per time unit
+The plane that crashed : 7
+
+
+This is the situation before the plane crash
+Total number of planes processed 			39
+Total number of planes asking to land 		22
+Total number of planes asking to take off 		17
+Total number of planes accepted for landing 		22
+Total number of planes accepted for takeoff 		17
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		0
+Total number of planes that landed			22
+Total number of planes that took off			12
+Percentage of time runway idle 			2.94118% 
+Average wait in landing queue 				0.272727 time units
+Average wait in takeoff queue 				3.41667 time units
+Average obserbed rate of planes wanting to land 	0.647059 per time unit
+Average obserbed rate of planes wanting to take off 	0.5 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			103
+Total number of planes asking to land 		57
+Total number of planes asking to take off 		46
+Total number of planes accepted for landing 		57
+Total number of planes accepted for takeoff 		44
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		2
+Total number of planes that landed			55
+Total number of planes that took off			43
+Percentage of time runway idle 			18.4874% 
+Average wait in landing queue 				0.4 time units
+Average wait in takeoff queue 				4.27907 time units
+Average obserbed rate of planes wanting to land 	0.478992 per time unit
+Average obserbed rate of planes wanting to take off 	0.386555 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			259
+Total number of planes asking to land 		130
+Total number of planes asking to take off 		129
+Total number of planes accepted for landing 		130
+Total number of planes accepted for takeoff 		121
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		8
+Total number of planes that landed			128
+Total number of planes that took off			117
+Percentage of time runway idle 			12.8571% 
+Average wait in landing queue 				0.335938 time units
+Average wait in takeoff queue 				4.16239 time units
+Average obserbed rate of planes wanting to land 	0.464286 per time unit
+Average obserbed rate of planes wanting to take off 	0.460714 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			265
+Total number of planes asking to land 		134
+Total number of planes asking to take off 		131
+Total number of planes accepted for landing 		134
+Total number of planes accepted for takeoff 		122
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		9
+Total number of planes that landed			131
+Total number of planes that took off			117
+Percentage of time runway idle 			12.7208% 
+Average wait in landing queue 				0.374046 time units
+Average wait in takeoff queue 				4.16239 time units
+Average obserbed rate of planes wanting to land 	0.473498 per time unit
+Average obserbed rate of planes wanting to take off 	0.462898 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			266
+Total number of planes asking to land 		135
+Total number of planes asking to take off 		131
+Total number of planes accepted for landing 		135
+Total number of planes accepted for takeoff 		122
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		9
+Total number of planes that landed			134
+Total number of planes that took off			117
+Percentage of time runway idle 			12.5874% 
+Average wait in landing queue 				0.425373 time units
+Average wait in takeoff queue 				4.16239 time units
+Average obserbed rate of planes wanting to land 	0.472028 per time unit
+Average obserbed rate of planes wanting to take off 	0.458042 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			266
+Total number of planes asking to land 		135
+Total number of planes asking to take off 		131
+Total number of planes accepted for landing 		135
+Total number of planes accepted for takeoff 		122
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		9
+Total number of planes that landed			135
+Total number of planes that took off			117
+Percentage of time runway idle 			12.5436% 
+Average wait in landing queue 				0.444444 time units
+Average wait in takeoff queue 				4.16239 time units
+Average obserbed rate of planes wanting to land 	0.470383 per time unit
+Average obserbed rate of planes wanting to take off 	0.456446 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			423
+Total number of planes asking to land 		215
+Total number of planes asking to take off 		208
+Total number of planes accepted for landing 		215
+Total number of planes accepted for takeoff 		195
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		13
+Total number of planes that landed			212
+Total number of planes that took off			195
+Percentage of time runway idle 			12.8755% 
+Average wait in landing queue 				0.34434 time units
+Average wait in takeoff queue 				4.25641 time units
+Average obserbed rate of planes wanting to land 	0.461373 per time unit
+Average obserbed rate of planes wanting to take off 	0.446352 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			494
+Total number of planes asking to land 		248
+Total number of planes asking to take off 		246
+Total number of planes accepted for landing 		248
+Total number of planes accepted for takeoff 		231
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		15
+Total number of planes that landed			248
+Total number of planes that took off			226
+Percentage of time runway idle 			11.4232% 
+Average wait in landing queue 				0.354839 time units
+Average wait in takeoff queue 				4.20796 time units
+Average obserbed rate of planes wanting to land 	0.464419 per time unit
+Average obserbed rate of planes wanting to take off 	0.460674 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			539
+Total number of planes asking to land 		268
+Total number of planes asking to take off 		271
+Total number of planes accepted for landing 		268
+Total number of planes accepted for takeoff 		253
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		18
+Total number of planes that landed			268
+Total number of planes that took off			249
+Percentage of time runway idle 			11.1876% 
+Average wait in landing queue 				0.358209 time units
+Average wait in takeoff queue 				4.13253 time units
+Average obserbed rate of planes wanting to land 	0.461274 per time unit
+Average obserbed rate of planes wanting to take off 	0.466437 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			617
+Total number of planes asking to land 		309
+Total number of planes asking to take off 		308
+Total number of planes accepted for landing 		309
+Total number of planes accepted for takeoff 		285
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		23
+Total number of planes that landed			307
+Total number of planes that took off			283
+Percentage of time runway idle 			10.3501% 
+Average wait in landing queue 				0.387622 time units
+Average wait in takeoff queue 				4.20848 time units
+Average obserbed rate of planes wanting to land 	0.47032 per time unit
+Average obserbed rate of planes wanting to take off 	0.468798 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			642
+Total number of planes asking to land 		322
+Total number of planes asking to take off 		320
+Total number of planes accepted for landing 		322
+Total number of planes accepted for takeoff 		297
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		23
+Total number of planes that landed			322
+Total number of planes that took off			295
+Percentage of time runway idle 			9.94152% 
+Average wait in landing queue 				0.413043 time units
+Average wait in takeoff queue 				4.27458 time units
+Average obserbed rate of planes wanting to land 	0.47076 per time unit
+Average obserbed rate of planes wanting to take off 	0.467836 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			707
+Total number of planes asking to land 		355
+Total number of planes asking to take off 		352
+Total number of planes accepted for landing 		355
+Total number of planes accepted for takeoff 		321
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		31
+Total number of planes that landed			353
+Total number of planes that took off			316
+Percentage of time runway idle 			9.48509% 
+Average wait in landing queue 				0.444759 time units
+Average wait in takeoff queue 				4.35443 time units
+Average obserbed rate of planes wanting to land 	0.48103 per time unit
+Average obserbed rate of planes wanting to take off 	0.476965 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			710
+Total number of planes asking to land 		357
+Total number of planes asking to take off 		353
+Total number of planes accepted for landing 		357
+Total number of planes accepted for takeoff 		321
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		32
+Total number of planes that landed			355
+Total number of planes that took off			316
+Percentage of time runway idle 			9.45946% 
+Average wait in landing queue 				0.456338 time units
+Average wait in takeoff queue 				4.35443 time units
+Average obserbed rate of planes wanting to land 	0.482432 per time unit
+Average obserbed rate of planes wanting to take off 	0.477027 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			712
+Total number of planes asking to land 		359
+Total number of planes asking to take off 		353
+Total number of planes accepted for landing 		359
+Total number of planes accepted for takeoff 		321
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		32
+Total number of planes that landed			358
+Total number of planes that took off			316
+Percentage of time runway idle 			9.42127% 
+Average wait in landing queue 				0.46648 time units
+Average wait in takeoff queue 				4.35443 time units
+Average obserbed rate of planes wanting to land 	0.483176 per time unit
+Average obserbed rate of planes wanting to take off 	0.475101 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			731
+Total number of planes asking to land 		370
+Total number of planes asking to take off 		361
+Total number of planes accepted for landing 		370
+Total number of planes accepted for takeoff 		324
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		37
+Total number of planes that landed			370
+Total number of planes that took off			319
+Percentage of time runway idle 			9.23483% 
+Average wait in landing queue 				0.478378 time units
+Average wait in takeoff queue 				4.42947 time units
+Average obserbed rate of planes wanting to land 	0.488127 per time unit
+Average obserbed rate of planes wanting to take off 	0.476253 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			762
+Total number of planes asking to land 		389
+Total number of planes asking to take off 		373
+Total number of planes accepted for landing 		389
+Total number of planes accepted for takeoff 		334
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		39
+Total number of planes that landed			388
+Total number of planes that took off			331
+Percentage of time runway idle 			8.88325% 
+Average wait in landing queue 				0.469072 time units
+Average wait in takeoff queue 				4.65861 time units
+Average obserbed rate of planes wanting to land 	0.493655 per time unit
+Average obserbed rate of planes wanting to take off 	0.47335 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			845
+Total number of planes asking to land 		421
+Total number of planes asking to take off 		424
+Total number of planes accepted for landing 		421
+Total number of planes accepted for takeoff 		373
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		51
+Total number of planes that landed			421
+Total number of planes that took off			368
+Percentage of time runway idle 			8.37209% 
+Average wait in landing queue 				0.456057 time units
+Average wait in takeoff queue 				4.71196 time units
+Average obserbed rate of planes wanting to land 	0.489535 per time unit
+Average obserbed rate of planes wanting to take off 	0.493023 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			906
+Total number of planes asking to land 		454
+Total number of planes asking to take off 		452
+Total number of planes accepted for landing 		454
+Total number of planes accepted for takeoff 		391
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		61
+Total number of planes that landed			452
+Total number of planes that took off			386
+Percentage of time runway idle 			7.92079% 
+Average wait in landing queue 				0.44469 time units
+Average wait in takeoff queue 				4.95596 time units
+Average obserbed rate of planes wanting to land 	0.49945 per time unit
+Average obserbed rate of planes wanting to take off 	0.49725 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			906
+Total number of planes asking to land 		454
+Total number of planes asking to take off 		452
+Total number of planes accepted for landing 		454
+Total number of planes accepted for takeoff 		391
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		61
+Total number of planes that landed			454
+Total number of planes that took off			386
+Percentage of time runway idle 			7.9034% 
+Average wait in landing queue 				0.451542 time units
+Average wait in takeoff queue 				4.95596 time units
+Average obserbed rate of planes wanting to land 	0.498353 per time unit
+Average obserbed rate of planes wanting to take off 	0.496158 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			957
+Total number of planes asking to land 		481
+Total number of planes asking to take off 		476
+Total number of planes accepted for landing 		481
+Total number of planes accepted for takeoff 		415
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		61
+Total number of planes that landed			480
+Total number of planes that took off			414
+Percentage of time runway idle 			7.74793% 
+Average wait in landing queue 				0.435417 time units
+Average wait in takeoff queue 				4.91787 time units
+Average obserbed rate of planes wanting to land 	0.496901 per time unit
+Average obserbed rate of planes wanting to take off 	0.491736 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			963
+Total number of planes asking to land 		485
+Total number of planes asking to take off 		478
+Total number of planes accepted for landing 		485
+Total number of planes accepted for takeoff 		417
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		61
+Total number of planes that landed			482
+Total number of planes that took off			414
+Percentage of time runway idle 			7.73196% 
+Average wait in landing queue 				0.439834 time units
+Average wait in takeoff queue 				4.91787 time units
+Average obserbed rate of planes wanting to land 	0.5 per time unit
+Average obserbed rate of planes wanting to take off 	0.492784 per time unit 
+
+Sumualation has conluded after 1000 time units.
+Total number of planes processed 			990
+Total number of planes asking to land 		500
+Total number of planes asking to take off 		490
+Total number of planes accepted for landing 		500
+Total number of planes accepted for takeoff 		428
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		62
+Total number of planes that landed			497
+Total number of planes that took off			428
+Total number of planes that left in landing queue	3
+Total number of planes that left in takeoff queue 	0
+Percentage of time runway idle 			7.5% 
+Average wait in landing queue 				0.44668 time units
+Average wait in takeoff queue 				4.8785 time units
+Average obserbed rate of planes wanting to land 	0.5 per time unit
+Average obserbed rate of planes wanting to take off 	0.49 per time unit
+The plane that crashed : 21
+
+
+This is the situation before the plane crash
+Total number of planes processed 			34
+Total number of planes asking to land 		17
+Total number of planes asking to take off 		17
+Total number of planes accepted for landing 		17
+Total number of planes accepted for takeoff 		15
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		2
+Total number of planes that landed			14
+Total number of planes that took off			10
+Percentage of time runway idle 			4.16667% 
+Average wait in landing queue 				0.5 time units
+Average wait in takeoff queue 				1.7 time units
+Average obserbed rate of planes wanting to land 	0.708333 per time unit
+Average obserbed rate of planes wanting to take off 	0.708333 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			36
+Total number of planes asking to land 		17
+Total number of planes asking to take off 		19
+Total number of planes accepted for landing 		17
+Total number of planes accepted for takeoff 		15
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		4
+Total number of planes that landed			15
+Total number of planes that took off			10
+Percentage of time runway idle 			4% 
+Average wait in landing queue 				0.6 time units
+Average wait in takeoff queue 				1.7 time units
+Average obserbed rate of planes wanting to land 	0.68 per time unit
+Average obserbed rate of planes wanting to take off 	0.76 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			165
+Total number of planes asking to land 		78
+Total number of planes asking to take off 		87
+Total number of planes accepted for landing 		78
+Total number of planes accepted for takeoff 		62
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		25
+Total number of planes that landed			77
+Total number of planes that took off			61
+Percentage of time runway idle 			3.52113% 
+Average wait in landing queue 				0.454545 time units
+Average wait in takeoff queue 				6.37705 time units
+Average obserbed rate of planes wanting to land 	0.549296 per time unit
+Average obserbed rate of planes wanting to take off 	0.612676 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			166
+Total number of planes asking to land 		78
+Total number of planes asking to take off 		88
+Total number of planes accepted for landing 		78
+Total number of planes accepted for takeoff 		63
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		25
+Total number of planes that landed			78
+Total number of planes that took off			61
+Percentage of time runway idle 			3.4965% 
+Average wait in landing queue 				0.474359 time units
+Average wait in takeoff queue 				6.37705 time units
+Average obserbed rate of planes wanting to land 	0.545455 per time unit
+Average obserbed rate of planes wanting to take off 	0.615385 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			193
+Total number of planes asking to land 		91
+Total number of planes asking to take off 		102
+Total number of planes accepted for landing 		91
+Total number of planes accepted for takeoff 		76
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		26
+Total number of planes that landed			90
+Total number of planes that took off			74
+Percentage of time runway idle 			5.23256% 
+Average wait in landing queue 				0.444444 time units
+Average wait in takeoff queue 				5.83784 time units
+Average obserbed rate of planes wanting to land 	0.52907 per time unit
+Average obserbed rate of planes wanting to take off 	0.593023 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			200
+Total number of planes asking to land 		95
+Total number of planes asking to take off 		105
+Total number of planes accepted for landing 		95
+Total number of planes accepted for takeoff 		79
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		26
+Total number of planes that landed			94
+Total number of planes that took off			76
+Percentage of time runway idle 			5.05618% 
+Average wait in landing queue 				0.468085 time units
+Average wait in takeoff queue 				5.77632 time units
+Average obserbed rate of planes wanting to land 	0.533708 per time unit
+Average obserbed rate of planes wanting to take off 	0.589888 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			261
+Total number of planes asking to land 		122
+Total number of planes asking to take off 		139
+Total number of planes accepted for landing 		122
+Total number of planes accepted for takeoff 		108
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		31
+Total number of planes that landed			122
+Total number of planes that took off			103
+Percentage of time runway idle 			3.86266% 
+Average wait in landing queue 				0.47541 time units
+Average wait in takeoff queue 				5.65049 time units
+Average obserbed rate of planes wanting to land 	0.523605 per time unit
+Average obserbed rate of planes wanting to take off 	0.596566 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			351
+Total number of planes asking to land 		157
+Total number of planes asking to take off 		194
+Total number of planes accepted for landing 		157
+Total number of planes accepted for takeoff 		159
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		35
+Total number of planes that landed			155
+Total number of planes that took off			155
+Percentage of time runway idle 			7.20721% 
+Average wait in landing queue 				0.387097 time units
+Average wait in takeoff queue 				4.94194 time units
+Average obserbed rate of planes wanting to land 	0.471471 per time unit
+Average obserbed rate of planes wanting to take off 	0.582583 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			369
+Total number of planes asking to land 		166
+Total number of planes asking to take off 		203
+Total number of planes accepted for landing 		166
+Total number of planes accepted for takeoff 		162
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		41
+Total number of planes that landed			166
+Total number of planes that took off			157
+Percentage of time runway idle 			6.93642% 
+Average wait in landing queue 				0.433735 time units
+Average wait in takeoff queue 				4.99363 time units
+Average obserbed rate of planes wanting to land 	0.479769 per time unit
+Average obserbed rate of planes wanting to take off 	0.586705 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			509
+Total number of planes asking to land 		239
+Total number of planes asking to take off 		270
+Total number of planes accepted for landing 		238
+Total number of planes accepted for takeoff 		220
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		50
+Total number of planes that landed			235
+Total number of planes that took off			215
+Percentage of time runway idle 			8.92495% 
+Average wait in landing queue 				0.429787 time units
+Average wait in takeoff queue 				5.20465 time units
+Average obserbed rate of planes wanting to land 	0.484787 per time unit
+Average obserbed rate of planes wanting to take off 	0.547667 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			514
+Total number of planes asking to land 		241
+Total number of planes asking to take off 		273
+Total number of planes accepted for landing 		240
+Total number of planes accepted for takeoff 		220
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		53
+Total number of planes that landed			239
+Total number of planes that took off			215
+Percentage of time runway idle 			8.85312% 
+Average wait in landing queue 				0.472803 time units
+Average wait in takeoff queue 				5.20465 time units
+Average obserbed rate of planes wanting to land 	0.484909 per time unit
+Average obserbed rate of planes wanting to take off 	0.549296 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			515
+Total number of planes asking to land 		241
+Total number of planes asking to take off 		274
+Total number of planes accepted for landing 		240
+Total number of planes accepted for takeoff 		220
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		54
+Total number of planes that landed			240
+Total number of planes that took off			215
+Percentage of time runway idle 			8.83534% 
+Average wait in landing queue 				0.479167 time units
+Average wait in takeoff queue 				5.20465 time units
+Average obserbed rate of planes wanting to land 	0.483936 per time unit
+Average obserbed rate of planes wanting to take off 	0.550201 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			522
+Total number of planes asking to land 		245
+Total number of planes asking to take off 		277
+Total number of planes accepted for landing 		244
+Total number of planes accepted for takeoff 		222
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		55
+Total number of planes that landed			244
+Total number of planes that took off			218
+Percentage of time runway idle 			8.71287% 
+Average wait in landing queue 				0.483607 time units
+Average wait in takeoff queue 				5.28899 time units
+Average obserbed rate of planes wanting to land 	0.485149 per time unit
+Average obserbed rate of planes wanting to take off 	0.548515 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			550
+Total number of planes asking to land 		259
+Total number of planes asking to take off 		291
+Total number of planes accepted for landing 		258
+Total number of planes accepted for takeoff 		229
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		62
+Total number of planes that landed			258
+Total number of planes that took off			224
+Percentage of time runway idle 			8.38095% 
+Average wait in landing queue 				0.484496 time units
+Average wait in takeoff queue 				5.47321 time units
+Average obserbed rate of planes wanting to land 	0.493333 per time unit
+Average obserbed rate of planes wanting to take off 	0.554286 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			605
+Total number of planes asking to land 		289
+Total number of planes asking to take off 		316
+Total number of planes accepted for landing 		288
+Total number of planes accepted for takeoff 		250
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		66
+Total number of planes that landed			287
+Total number of planes that took off			246
+Percentage of time runway idle 			7.79896% 
+Average wait in landing queue 				0.456446 time units
+Average wait in takeoff queue 				5.6748 time units
+Average obserbed rate of planes wanting to land 	0.500867 per time unit
+Average obserbed rate of planes wanting to take off 	0.54766 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			609
+Total number of planes asking to land 		292
+Total number of planes asking to take off 		317
+Total number of planes accepted for landing 		291
+Total number of planes accepted for takeoff 		251
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		66
+Total number of planes that landed			290
+Total number of planes that took off			247
+Percentage of time runway idle 			7.74527% 
+Average wait in landing queue 				0.458621 time units
+Average wait in takeoff queue 				5.68826 time units
+Average obserbed rate of planes wanting to land 	0.502582 per time unit
+Average obserbed rate of planes wanting to take off 	0.545611 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			724
+Total number of planes asking to land 		349
+Total number of planes asking to take off 		375
+Total number of planes accepted for landing 		348
+Total number of planes accepted for takeoff 		306
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		69
+Total number of planes that landed			348
+Total number of planes that took off			305
+Percentage of time runway idle 			8.81119% 
+Average wait in landing queue 				0.436782 time units
+Average wait in takeoff queue 				5.25574 time units
+Average obserbed rate of planes wanting to land 	0.488112 per time unit
+Average obserbed rate of planes wanting to take off 	0.524476 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			792
+Total number of planes asking to land 		382
+Total number of planes asking to take off 		410
+Total number of planes accepted for landing 		381
+Total number of planes accepted for takeoff 		335
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		75
+Total number of planes that landed			379
+Total number of planes that took off			330
+Percentage of time runway idle 			10.2662% 
+Average wait in landing queue 				0.437995 time units
+Average wait in takeoff queue 				5.23333 time units
+Average obserbed rate of planes wanting to land 	0.484157 per time unit
+Average obserbed rate of planes wanting to take off 	0.519645 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1004
+Total number of planes asking to land 		491
+Total number of planes asking to take off 		513
+Total number of planes accepted for landing 		490
+Total number of planes accepted for takeoff 		426
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		87
+Total number of planes that landed			489
+Total number of planes that took off			421
+Percentage of time runway idle 			9.82143% 
+Average wait in landing queue 				0.439673 time units
+Average wait in takeoff queue 				5.18527 time units
+Average obserbed rate of planes wanting to land 	0.487103 per time unit
+Average obserbed rate of planes wanting to take off 	0.508929 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1005
+Total number of planes asking to land 		491
+Total number of planes asking to take off 		514
+Total number of planes accepted for landing 		490
+Total number of planes accepted for takeoff 		426
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		88
+Total number of planes that landed			490
+Total number of planes that took off			421
+Percentage of time runway idle 			9.81169% 
+Average wait in landing queue 				0.442857 time units
+Average wait in takeoff queue 				5.18527 time units
+Average obserbed rate of planes wanting to land 	0.48662 per time unit
+Average obserbed rate of planes wanting to take off 	0.509415 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1016
+Total number of planes asking to land 		498
+Total number of planes asking to take off 		518
+Total number of planes accepted for landing 		497
+Total number of planes accepted for takeoff 		430
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		88
+Total number of planes that landed			497
+Total number of planes that took off			429
+Percentage of time runway idle 			9.93184% 
+Average wait in landing queue 				0.438632 time units
+Average wait in takeoff queue 				5.23776 time units
+Average obserbed rate of planes wanting to land 	0.484908 per time unit
+Average obserbed rate of planes wanting to take off 	0.504382 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1024
+Total number of planes asking to land 		505
+Total number of planes asking to take off 		519
+Total number of planes accepted for landing 		504
+Total number of planes accepted for takeoff 		431
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		88
+Total number of planes that landed			500
+Total number of planes that took off			430
+Percentage of time runway idle 			9.89331% 
+Average wait in landing queue 				0.442 time units
+Average wait in takeoff queue 				5.22791 time units
+Average obserbed rate of planes wanting to land 	0.489816 per time unit
+Average obserbed rate of planes wanting to take off 	0.503395 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1024
+Total number of planes asking to land 		505
+Total number of planes asking to take off 		519
+Total number of planes accepted for landing 		504
+Total number of planes accepted for takeoff 		431
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		88
+Total number of planes that landed			502
+Total number of planes that took off			430
+Percentage of time runway idle 			9.87415% 
+Average wait in landing queue 				0.452191 time units
+Average wait in takeoff queue 				5.22791 time units
+Average obserbed rate of planes wanting to land 	0.488867 per time unit
+Average obserbed rate of planes wanting to take off 	0.50242 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1027
+Total number of planes asking to land 		507
+Total number of planes asking to take off 		520
+Total number of planes accepted for landing 		506
+Total number of planes accepted for takeoff 		432
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		88
+Total number of planes that landed			506
+Total number of planes that took off			432
+Percentage of time runway idle 			9.81713% 
+Average wait in landing queue 				0.466403 time units
+Average wait in takeoff queue 				5.22685 time units
+Average obserbed rate of planes wanting to land 	0.487969 per time unit
+Average obserbed rate of planes wanting to take off 	0.500481 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1042
+Total number of planes asking to land 		516
+Total number of planes asking to take off 		526
+Total number of planes accepted for landing 		515
+Total number of planes accepted for takeoff 		438
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		88
+Total number of planes that landed			514
+Total number of planes that took off			435
+Percentage of time runway idle 			10.397% 
+Average wait in landing queue 				0.466926 time units
+Average wait in takeoff queue 				5.1931 time units
+Average obserbed rate of planes wanting to land 	0.487713 per time unit
+Average obserbed rate of planes wanting to take off 	0.497164 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1042
+Total number of planes asking to land 		516
+Total number of planes asking to take off 		526
+Total number of planes accepted for landing 		515
+Total number of planes accepted for takeoff 		438
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		88
+Total number of planes that landed			515
+Total number of planes that took off			435
+Percentage of time runway idle 			10.3872% 
+Average wait in landing queue 				0.467961 time units
+Average wait in takeoff queue 				5.1931 time units
+Average obserbed rate of planes wanting to land 	0.487252 per time unit
+Average obserbed rate of planes wanting to take off 	0.496695 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1092
+Total number of planes asking to land 		540
+Total number of planes asking to take off 		552
+Total number of planes accepted for landing 		539
+Total number of planes accepted for takeoff 		464
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		88
+Total number of planes that landed			539
+Total number of planes that took off			463
+Percentage of time runway idle 			11.1012% 
+Average wait in landing queue 				0.45269 time units
+Average wait in takeoff queue 				4.98056 time units
+Average obserbed rate of planes wanting to land 	0.479574 per time unit
+Average obserbed rate of planes wanting to take off 	0.490231 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1104
+Total number of planes asking to land 		547
+Total number of planes asking to take off 		557
+Total number of planes accepted for landing 		546
+Total number of planes accepted for takeoff 		469
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		88
+Total number of planes that landed			546
+Total number of planes that took off			468
+Percentage of time runway idle 			11.2182% 
+Average wait in landing queue 				0.450549 time units
+Average wait in takeoff queue 				4.94872 time units
+Average obserbed rate of planes wanting to land 	0.479404 per time unit
+Average obserbed rate of planes wanting to take off 	0.488168 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1135
+Total number of planes asking to land 		565
+Total number of planes asking to take off 		570
+Total number of planes accepted for landing 		564
+Total number of planes accepted for takeoff 		481
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		89
+Total number of planes that landed			563
+Total number of planes that took off			476
+Percentage of time runway idle 			10.9777% 
+Average wait in landing queue 				0.479574 time units
+Average wait in takeoff queue 				4.94118 time units
+Average obserbed rate of planes wanting to land 	0.484563 per time unit
+Average obserbed rate of planes wanting to take off 	0.488851 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1145
+Total number of planes asking to land 		571
+Total number of planes asking to take off 		574
+Total number of planes accepted for landing 		570
+Total number of planes accepted for takeoff 		484
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		90
+Total number of planes that landed			570
+Total number of planes that took off			481
+Percentage of time runway idle 			10.8659% 
+Average wait in landing queue 				0.482456 time units
+Average wait in takeoff queue 				5.01455 time units
+Average obserbed rate of planes wanting to land 	0.48472 per time unit
+Average obserbed rate of planes wanting to take off 	0.487267 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1150
+Total number of planes asking to land 		573
+Total number of planes asking to take off 		577
+Total number of planes accepted for landing 		572
+Total number of planes accepted for takeoff 		487
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		90
+Total number of planes that landed			572
+Total number of planes that took off			482
+Percentage of time runway idle 			10.8383% 
+Average wait in landing queue 				0.482517 time units
+Average wait in takeoff queue 				5.0249 time units
+Average obserbed rate of planes wanting to land 	0.485182 per time unit
+Average obserbed rate of planes wanting to take off 	0.488569 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1263
+Total number of planes asking to land 		633
+Total number of planes asking to take off 		630
+Total number of planes accepted for landing 		632
+Total number of planes accepted for takeoff 		533
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		97
+Total number of planes that landed			629
+Total number of planes that took off			530
+Percentage of time runway idle 			10.3715% 
+Average wait in landing queue 				0.470588 time units
+Average wait in takeoff queue 				5.05849 time units
+Average obserbed rate of planes wanting to land 	0.489938 per time unit
+Average obserbed rate of planes wanting to take off 	0.487616 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1306
+Total number of planes asking to land 		653
+Total number of planes asking to take off 		653
+Total number of planes accepted for landing 		652
+Total number of planes accepted for takeoff 		553
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		100
+Total number of planes that landed			652
+Total number of planes that took off			553
+Percentage of time runway idle 			10.35% 
+Average wait in landing queue 				0.476994 time units
+Average wait in takeoff queue 				5.03797 time units
+Average obserbed rate of planes wanting to land 	0.486225 per time unit
+Average obserbed rate of planes wanting to take off 	0.486225 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1326
+Total number of planes asking to land 		662
+Total number of planes asking to take off 		664
+Total number of planes accepted for landing 		661
+Total number of planes accepted for takeoff 		564
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		100
+Total number of planes that landed			660
+Total number of planes that took off			562
+Percentage of time runway idle 			10.2866% 
+Average wait in landing queue 				0.474242 time units
+Average wait in takeoff queue 				5 time units
+Average obserbed rate of planes wanting to land 	0.486407 per time unit
+Average obserbed rate of planes wanting to take off 	0.487877 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1381
+Total number of planes asking to land 		685
+Total number of planes asking to take off 		696
+Total number of planes accepted for landing 		684
+Total number of planes accepted for takeoff 		595
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		101
+Total number of planes that landed			683
+Total number of planes that took off			592
+Percentage of time runway idle 			10.2185% 
+Average wait in landing queue 				0.471449 time units
+Average wait in takeoff queue 				4.94088 time units
+Average obserbed rate of planes wanting to land 	0.482734 per time unit
+Average obserbed rate of planes wanting to take off 	0.490486 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1444
+Total number of planes asking to land 		717
+Total number of planes asking to take off 		727
+Total number of planes accepted for landing 		716
+Total number of planes accepted for takeoff 		626
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		101
+Total number of planes that landed			714
+Total number of planes that took off			624
+Percentage of time runway idle 			10.2082% 
+Average wait in landing queue 				0.457983 time units
+Average wait in takeoff queue 				4.80288 time units
+Average obserbed rate of planes wanting to land 	0.481531 per time unit
+Average obserbed rate of planes wanting to take off 	0.488247 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1444
+Total number of planes asking to land 		717
+Total number of planes asking to take off 		727
+Total number of planes accepted for landing 		716
+Total number of planes accepted for takeoff 		626
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		101
+Total number of planes that landed			716
+Total number of planes that took off			624
+Percentage of time runway idle 			10.1945% 
+Average wait in landing queue 				0.460894 time units
+Average wait in takeoff queue 				4.80288 time units
+Average obserbed rate of planes wanting to land 	0.480885 per time unit
+Average obserbed rate of planes wanting to take off 	0.487592 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1503
+Total number of planes asking to land 		748
+Total number of planes asking to take off 		755
+Total number of planes accepted for landing 		747
+Total number of planes accepted for takeoff 		650
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		105
+Total number of planes that landed			746
+Total number of planes that took off			645
+Percentage of time runway idle 			9.85733% 
+Average wait in landing queue 				0.453083 time units
+Average wait in takeoff queue 				4.86202 time units
+Average obserbed rate of planes wanting to land 	0.485084 per time unit
+Average obserbed rate of planes wanting to take off 	0.489624 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1540
+Total number of planes asking to land 		767
+Total number of planes asking to take off 		773
+Total number of planes accepted for landing 		766
+Total number of planes accepted for takeoff 		667
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		106
+Total number of planes that landed			765
+Total number of planes that took off			662
+Percentage of time runway idle 			9.97475% 
+Average wait in landing queue 				0.449673 time units
+Average wait in takeoff queue 				4.83686 time units
+Average obserbed rate of planes wanting to land 	0.484217 per time unit
+Average obserbed rate of planes wanting to take off 	0.488005 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1644
+Total number of planes asking to land 		813
+Total number of planes asking to take off 		831
+Total number of planes accepted for landing 		812
+Total number of planes accepted for takeoff 		715
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		116
+Total number of planes that landed			812
+Total number of planes that took off			714
+Percentage of time runway idle 			9.76331% 
+Average wait in landing queue 				0.440887 time units
+Average wait in takeoff queue 				4.90336 time units
+Average obserbed rate of planes wanting to land 	0.481065 per time unit
+Average obserbed rate of planes wanting to take off 	0.491716 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1699
+Total number of planes asking to land 		828
+Total number of planes asking to take off 		871
+Total number of planes accepted for landing 		827
+Total number of planes accepted for takeoff 		752
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		119
+Total number of planes that landed			826
+Total number of planes that took off			747
+Percentage of time runway idle 			9.49914% 
+Average wait in landing queue 				0.435835 time units
+Average wait in takeoff queue 				4.84203 time units
+Average obserbed rate of planes wanting to land 	0.476684 per time unit
+Average obserbed rate of planes wanting to take off 	0.501439 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1701
+Total number of planes asking to land 		830
+Total number of planes asking to take off 		871
+Total number of planes accepted for landing 		829
+Total number of planes accepted for takeoff 		752
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		119
+Total number of planes that landed			827
+Total number of planes that took off			747
+Percentage of time runway idle 			9.49367% 
+Average wait in landing queue 				0.437727 time units
+Average wait in takeoff queue 				4.84203 time units
+Average obserbed rate of planes wanting to land 	0.47756 per time unit
+Average obserbed rate of planes wanting to take off 	0.501151 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1785
+Total number of planes asking to land 		875
+Total number of planes asking to take off 		910
+Total number of planes accepted for landing 		874
+Total number of planes accepted for takeoff 		779
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		131
+Total number of planes that landed			874
+Total number of planes that took off			778
+Percentage of time runway idle 			9.63328% 
+Average wait in landing queue 				0.434783 time units
+Average wait in takeoff queue 				4.91774 time units
+Average obserbed rate of planes wanting to land 	0.478927 per time unit
+Average obserbed rate of planes wanting to take off 	0.498084 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1795
+Total number of planes asking to land 		881
+Total number of planes asking to take off 		914
+Total number of planes accepted for landing 		880
+Total number of planes accepted for takeoff 		783
+Total number of planes refused for landing 		1
+Total number of planes refused for takeoff		131
+Total number of planes that landed			877
+Total number of planes that took off			781
+Percentage of time runway idle 			9.60175% 
+Average wait in landing queue 				0.435576 time units
+Average wait in takeoff queue 				4.90653 time units
+Average obserbed rate of planes wanting to land 	0.480633 per time unit
+Average obserbed rate of planes wanting to take off 	0.498636 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1805
+Total number of planes asking to land 		887
+Total number of planes asking to take off 		918
+Total number of planes accepted for landing 		885
+Total number of planes accepted for takeoff 		786
+Total number of planes refused for landing 		2
+Total number of planes refused for takeoff		132
+Total number of planes that landed			882
+Total number of planes that took off			781
+Percentage of time runway idle 			9.57563% 
+Average wait in landing queue 				0.450113 time units
+Average wait in takeoff queue 				4.90653 time units
+Average obserbed rate of planes wanting to land 	0.48259 per time unit
+Average obserbed rate of planes wanting to take off 	0.499456 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1806
+Total number of planes asking to land 		888
+Total number of planes asking to take off 		918
+Total number of planes accepted for landing 		886
+Total number of planes accepted for takeoff 		786
+Total number of planes refused for landing 		2
+Total number of planes refused for takeoff		132
+Total number of planes that landed			883
+Total number of planes that took off			781
+Percentage of time runway idle 			9.57042% 
+Average wait in landing queue 				0.454134 time units
+Average wait in takeoff queue 				4.90653 time units
+Average obserbed rate of planes wanting to land 	0.482871 per time unit
+Average obserbed rate of planes wanting to take off 	0.499184 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			1939
+Total number of planes asking to land 		958
+Total number of planes asking to take off 		981
+Total number of planes accepted for landing 		956
+Total number of planes accepted for takeoff 		837
+Total number of planes refused for landing 		2
+Total number of planes refused for takeoff		144
+Total number of planes that landed			956
+Total number of planes that took off			833
+Percentage of time runway idle 			9.55994% 
+Average wait in landing queue 				0.462343 time units
+Average wait in takeoff queue 				4.90756 time units
+Average obserbed rate of planes wanting to land 	0.484573 per time unit
+Average obserbed rate of planes wanting to take off 	0.496206 per time unit 
+
+Sumualation has conluded after 2000 time units.
+Total number of planes processed 			1958
+Total number of planes asking to land 		968
+Total number of planes asking to take off 		990
+Total number of planes accepted for landing 		966
+Total number of planes accepted for takeoff 		845
+Total number of planes refused for landing 		2
+Total number of planes refused for takeoff		145
+Total number of planes that landed			966
+Total number of planes that took off			844
+Total number of planes that left in landing queue	0
+Total number of planes that left in takeoff queue 	1
+Percentage of time runway idle 			9.5% 
+Average wait in landing queue 				0.458592 time units
+Average wait in takeoff queue 				4.94668 time units
+Average obserbed rate of planes wanting to land 	0.484 per time unit
+Average obserbed rate of planes wanting to take off 	0.495 per time unit
+The plane that crashed : 48
+

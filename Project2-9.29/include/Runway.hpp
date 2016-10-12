@@ -14,6 +14,7 @@ class Runway {
   Error_code can_depart(const Plane& current);
   Runway_activity activity(int time, Plane& moving);
   void shut_down(int time) const;
+  void before_crash(int time) const;
 
  private:
   Extended_queue<Plane> landing;

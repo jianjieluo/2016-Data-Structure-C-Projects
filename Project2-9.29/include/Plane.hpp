@@ -11,16 +11,18 @@ class Plane {
   /**
    * initial a plane with its number, time and status
    */
-  Plane(int flt, int time, Plane_status status);
+  Plane(int flt, int time, int fuel, Plane_status status);
   ~Plane() {}
   void refuse() const;
-  void land(int time) const;
+  bool land(int time) ;
   void fly(int time) const;
   int started() const;
-
+  Plane_status get_status() const;
+  static int crash;
  private:
   int m_flt_num;
   int m_clock_start;
-  Plane_status m_state;
+  int m_fuel;
+  Plane_status m_stage;
 };
 #endif
