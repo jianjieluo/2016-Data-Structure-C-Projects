@@ -200,3 +200,4 @@ void initialize(int &end_time, int &queue_limit, double &arrival_rate,
 }
 
 void run_idle(int time) { cout << time << ":\tRunway is idle." << endl; }
+

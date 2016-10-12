@@ -7,25 +7,42 @@ BUILD_DIR := build
 BIN_DIR := bin
 INC_DIR := include
 
-$(BIN_DIR)/AirportSimulation : $(BUILD_DIR)/main.o $(BUILD_DIR)/Plane.o \
+target1 := $(BIN_DIR)/Simulation1
+target2 := $(BIN_DIR)/Simulation2
+target3 := $(BIN_DIR)/Simulation3
+target4 := $(BIN_DIR)/Simulation4
+
+all: $(target1) $(target2) $(target3) $(target4)
+
+$(target1) : $(BUILD_DIR)/main1.o $(BUILD_DIR)/Plane.o \
 															 $(BUILD_DIR)/Runway.o $(BUILD_DIR)/Random.o
 	@mkdir -p data
 	@mkdir -p $(BIN_DIR)
 	$(CC) $(CXXFLAGS) $^ -o $@
 
-# $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
-# 	@mkdir -p $(BUILD_DIR)
-# 	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
+$(target2) : $(BUILD_DIR)/main2.o $(BUILD_DIR)/Plane.o \
+															 $(BUILD_DIR)/Runway.o $(BUILD_DIR)/Random.o
+	@mkdir -p data
+	@mkdir -p $(BIN_DIR)
+	$(CC) $(CXXFLAGS) $^ -o $@
+
+$(target3) : $(BUILD_DIR)/main3.o $(BUILD_DIR)/Plane.o \
+															 $(BUILD_DIR)/Runway.o $(BUILD_DIR)/Random.o
+	@mkdir -p data
+	@mkdir -p $(BIN_DIR)
+	$(CC) $(CXXFLAGS) $^ -o $@
+
+$(target4) : $(BUILD_DIR)/main4.o $(BUILD_DIR)/Plane.o \
+															 $(BUILD_DIR)/Runway.o $(BUILD_DIR)/Random.o
+	@mkdir -p data
+	@mkdir -p $(BIN_DIR)
+	$(CC) $(CXXFLAGS) $^ -o $@
 
 # It's a very good example to complie th template class with make !!!!!!
 # Since Template is a dynamic distribution,
 # So it should be built with the client code(main.cpp) to be the main.o
 
 $(BUILD_DIR)/Random.o : $(SRC_DIR)/Random.cpp
-	@mkdir -p $(BUILD_DIR)
-	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
-
-$(BUILD_DIR)/main.o : $(SRC_DIR)/main.cpp $(INC_DIR)/Extended_queue.hpp $(SRC_DIR)/Extended_queue.cpp
 	@mkdir -p $(BUILD_DIR)
 	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
 
@@ -37,6 +54,21 @@ $(BUILD_DIR)/Runway.o : $(SRC_DIR)/Runway.cpp
 	@mkdir -p $(BUILD_DIR)
 	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
 
+$(BUILD_DIR)/main1.o : $(SRC_DIR)/main1.cpp $(INC_DIR)/Extended_queue.hpp $(SRC_DIR)/Extended_queue.cpp
+	@mkdir -p $(BUILD_DIR)
+	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
+
+$(BUILD_DIR)/main2.o : $(SRC_DIR)/main2.cpp $(INC_DIR)/Extended_queue.hpp $(SRC_DIR)/Extended_queue.cpp
+	@mkdir -p $(BUILD_DIR)
+	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
+
+$(BUILD_DIR)/main3.o : $(SRC_DIR)/main3.cpp $(INC_DIR)/Extended_queue.hpp $(SRC_DIR)/Extended_queue.cpp
+	@mkdir -p $(BUILD_DIR)
+	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
+
+$(BUILD_DIR)/main4.o : $(SRC_DIR)/main4.cpp $(INC_DIR)/Extended_queue.hpp $(SRC_DIR)/Extended_queue.cpp
+	@mkdir -p $(BUILD_DIR)
+	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
 
 
 clean:
