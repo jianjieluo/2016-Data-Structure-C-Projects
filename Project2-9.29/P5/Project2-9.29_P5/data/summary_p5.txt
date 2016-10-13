@@ -1,0 +1,318 @@
+This is the situation before the plane crash
+Total number of planes processed 			15
+Percentage of time runway idle 			33.3333% 
+0.277778 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			93
+Percentage of time runway idle 			17.6471% 
+0.441176 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			116
+Percentage of time runway idle 			14.876% 
+0.471074 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			233
+Percentage of time runway idle 			14.1762% 
+0.467433 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			246
+Percentage of time runway idle 			13.6029% 
+0.474265 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			275
+Percentage of time runway idle 			12.7036% 
+0.465798 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			294
+Percentage of time runway idle 			12.5382% 
+0.458716 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			296
+Percentage of time runway idle 			12.462% 
+0.458967 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			403
+Percentage of time runway idle 			16.0338% 
+0.424051 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			412
+Percentage of time runway idle 			15.8004% 
+0.428274 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			464
+Percentage of time runway idle 			15.0838% 
+0.43203 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			467
+Percentage of time runway idle 			15% 
+0.42963 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			592
+Percentage of time runway idle 			13.6228% 
+0.435629 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			627
+Percentage of time runway idle 			13.1837% 
+0.436185 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			630
+Percentage of time runway idle 			13.1653% 
+0.438375 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			672
+Percentage of time runway idle 			13.8961% 
+0.432468 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			753
+Percentage of time runway idle 			12.6478% 
+0.449173 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			769
+Percentage of time runway idle 			12.3843% 
+0.451389 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			884
+Percentage of time runway idle 			11.1452% 
+0.4591 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			886
+Percentage of time runway idle 			11.1338% 
+0.459653 per time unit 
+
+This is the total situation : 
+Sumualation has conluded after 1000 time units.
+Queue limit : 			10
+Arrival rate & departure rate : 			0.45
+Total number of planes processed 			898
+Total number of planes asking to land 		441
+Total number of planes asking to take off 		457
+Total number of planes accepted for landing 		441
+Total number of planes accepted for takeoff 		450
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		7
+Total number of planes that landed			441
+Total number of planes that took off			450
+Total number of planes that left in landing queue	0
+Total number of planes that left in takeoff queue 	0
+Percentage of time runway idle 			10.9% 
+Average wait in landing queue 				0.419501 time units
+Average wait in takeoff queue 				6.70667 time units
+Average obserbed rate of planes wanting to land 	0.441 per time unit
+Average obserbed rate of planes wanting to take off 	0.457 per time unit
+The plane that crashed : 20
+
+
+This is the situation before the plane crash
+Total number of planes processed 			62
+Percentage of time runway idle 			22.6667% 
+0.386667 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			209
+Percentage of time runway idle 			16.4609% 
+0.45679 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			215
+Percentage of time runway idle 			16.2602% 
+0.46748 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			234
+Percentage of time runway idle 			18.4116% 
+0.440433 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			332
+Percentage of time runway idle 			18.1818% 
+0.414141 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			365
+Percentage of time runway idle 			18.1609% 
+0.418391 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			375
+Percentage of time runway idle 			17.8733% 
+0.425339 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			626
+Percentage of time runway idle 			16.4138% 
+0.438621 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			626
+Percentage of time runway idle 			16.3686% 
+0.437414 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			633
+Percentage of time runway idle 			16.1905% 
+0.439456 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			661
+Percentage of time runway idle 			15.9477% 
+0.439216 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			686
+Percentage of time runway idle 			16.0354% 
+0.436869 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			686
+Percentage of time runway idle 			16.0151% 
+0.436318 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			749
+Percentage of time runway idle 			16.185% 
+0.433526 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			755
+Percentage of time runway idle 			16.092% 
+0.432184 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			769
+Percentage of time runway idle 			15.7658% 
+0.429054 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			773
+Percentage of time runway idle 			15.7127% 
+0.428732 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			803
+Percentage of time runway idle 			15.6926% 
+0.428571 per time unit 
+
+This is the total situation : 
+Sumualation has conluded after 1000 time units.
+Queue limit : 			5
+Arrival rate & departure rate : 			0.45
+Total number of planes processed 			865
+Total number of planes asking to land 		432
+Total number of planes asking to take off 		433
+Total number of planes accepted for landing 		432
+Total number of planes accepted for takeoff 		410
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		23
+Total number of planes that landed			432
+Total number of planes that took off			408
+Total number of planes that left in landing queue	0
+Total number of planes that left in takeoff queue 	2
+Percentage of time runway idle 			16% 
+Average wait in landing queue 				0.388889 time units
+Average wait in takeoff queue 				3.36275 time units
+Average obserbed rate of planes wanting to land 	0.432 per time unit
+Average obserbed rate of planes wanting to take off 	0.433 per time unit
+The plane that crashed : 18
+
+
+This is the situation before the plane crash
+Total number of planes processed 			26
+Percentage of time runway idle 			30.5556% 
+0.333333 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			51
+Percentage of time runway idle 			21.3115% 
+0.42623 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			111
+Percentage of time runway idle 			22.3022% 
+0.330935 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			141
+Percentage of time runway idle 			23.6264% 
+0.32967 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			161
+Percentage of time runway idle 			23.1884% 
+0.328502 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			235
+Percentage of time runway idle 			20.4225% 
+0.352113 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			238
+Percentage of time runway idle 			20.2797% 
+0.353147 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			311
+Percentage of time runway idle 			21.466% 
+0.361257 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			323
+Percentage of time runway idle 			20.9596% 
+0.361111 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			390
+Percentage of time runway idle 			19.9153% 
+0.377119 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			391
+Percentage of time runway idle 			19.8731% 
+0.376321 per time unit 
+
+This is the situation before the plane crash
+Total number of planes processed 			393
+Percentage of time runway idle 			19.7895% 
+0.376842 per time unit 
+
+This is the total situation : 
+Sumualation has conluded after 500 time units.
+Queue limit : 			5
+Arrival rate & departure rate : 			0.45
+Total number of planes processed 			414
+Total number of planes asking to land 		224
+Total number of planes asking to take off 		190
+Total number of planes accepted for landing 		224
+Total number of planes accepted for takeoff 		182
+Total number of planes refused for landing 		0
+Total number of planes refused for takeoff		8
+Total number of planes that landed			224
+Total number of planes that took off			180
+Total number of planes that left in landing queue	0
+Total number of planes that left in takeoff queue 	2
+Percentage of time runway idle 			19.2% 
+Average wait in landing queue 				0.330357 time units
+Average wait in takeoff queue 				2.79444 time units
+Average obserbed rate of planes wanting to land 	0.448 per time unit
+Average obserbed rate of planes wanting to take off 	0.38 per time unit
+The plane that crashed : 12
+

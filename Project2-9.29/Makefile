@@ -11,8 +11,9 @@ target1 := $(BIN_DIR)/Simulation1
 target2 := $(BIN_DIR)/Simulation2
 target3 := $(BIN_DIR)/Simulation3
 target4 := $(BIN_DIR)/Simulation4
+target6 := $(BIN_DIR)/Simulation6
 
-all: $(target1) $(target2) $(target3) $(target4)
+all: $(target1) $(target2) $(target3) $(target4) $(target6)
 
 $(target1) : $(BUILD_DIR)/main1.o $(BUILD_DIR)/Plane.o \
 															 $(BUILD_DIR)/Runway.o $(BUILD_DIR)/Random.o
@@ -33,6 +34,12 @@ $(target3) : $(BUILD_DIR)/main3.o $(BUILD_DIR)/Plane.o \
 	$(CC) $(CXXFLAGS) $^ -o $@
 
 $(target4) : $(BUILD_DIR)/main4.o $(BUILD_DIR)/Plane.o \
+															 $(BUILD_DIR)/Runway.o $(BUILD_DIR)/Random.o
+	@mkdir -p data
+	@mkdir -p $(BIN_DIR)
+	$(CC) $(CXXFLAGS) $^ -o $@
+
+$(target6) : $(BUILD_DIR)/main6.o $(BUILD_DIR)/Plane.o \
 															 $(BUILD_DIR)/Runway.o $(BUILD_DIR)/Random.o
 	@mkdir -p data
 	@mkdir -p $(BIN_DIR)
@@ -67,6 +74,10 @@ $(BUILD_DIR)/main3.o : $(SRC_DIR)/main3.cpp $(INC_DIR)/Extended_queue.hpp $(SRC_
 	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
 
 $(BUILD_DIR)/main4.o : $(SRC_DIR)/main4.cpp $(INC_DIR)/Extended_queue.hpp $(SRC_DIR)/Extended_queue.cpp
+	@mkdir -p $(BUILD_DIR)
+	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
+
+$(BUILD_DIR)/main6.o : $(SRC_DIR)/main6.cpp $(INC_DIR)/Extended_queue.hpp $(SRC_DIR)/Extended_queue.cpp
 	@mkdir -p $(BUILD_DIR)
 	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
 

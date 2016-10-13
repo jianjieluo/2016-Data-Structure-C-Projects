@@ -11,8 +11,8 @@
 // #include "Plane.hpp"
 #include <fstream>
 #include "Extended_queue.hpp"
-#include "Runway.hpp"
 #include "Random.hpp"
+#include "Runway.hpp"
 using namespace std;
 
 void initialize(int &end_time, int &queue_limit, double &arrival_rate,
@@ -26,7 +26,7 @@ int main(int argc, const char *argv[]) {
   double arrival_rate, departure_rate;
   initialize(end_time, queue_limit, arrival_rate, departure_rate);
   Random variable(false);
-  Runway Landing_runway(queue_limit); 
+  Runway Landing_runway(queue_limit);
   Runway Takingoff_runway(queue_limit);
   Runway Reserve_runway(queue_limit);
   for (int current_time = 0; current_time < end_time; current_time++) {
@@ -36,13 +36,13 @@ int main(int argc, const char *argv[]) {
     for (int i = 0; i < number_arrivals; i++) {
       Plane current_plane(flight_number++, current_time, arriving);
       bool flag = true;
-      if (Landing_runway.can_land(current_plane) != success){
+      if (Landing_runway.can_land(current_plane) != success) {
         current_plane.refuse();
         flag = false;
       }
-      if(flag) {
+      if (flag) {
         if (Takingoff_runway.takeoffingQueueEmpty()) {
-          if(++i >= number_arrivals) break;
+          if (++i >= number_arrivals) break;
           Plane current_plane_1(flight_number++, current_time, arriving);
           if (Takingoff_runway.can_land(current_plane_1) != success) {
             current_plane_1.refuse();
@@ -57,18 +57,19 @@ int main(int argc, const char *argv[]) {
           --i;
           --flight_number;
         }
-      } else if (Takingoff_runway.can_land(current_plane) != success) { // can't land on takingoff runway
+      } else if (Takingoff_runway.can_land(current_plane) !=
+                 success) {  // can't land on takingoff runway
+        current_plane.refuse();
+        if (Reserve_runway.can_land(current_plane) != success)
           current_plane.refuse();
-          if (Reserve_runway.can_land(current_plane) != success)
-            current_plane.refuse();
-      } else { // land on takingoff runway
-          if (++i >= number_arrivals) break;
-          Plane current_plane_2(flight_number++, current_time, arriving);
-          if (Reserve_runway.can_land(current_plane) != success) {
-            current_plane_2.refuse();
-            --i;
+      } else {  // land on takingoff runway
+        if (++i >= number_arrivals) break;
+        Plane current_plane_2(flight_number++, current_time, arriving);
+        if (Reserve_runway.can_land(current_plane) != success) {
+          current_plane_2.refuse();
+          --i;
           --flight_number;
-        } 
+        }
       }
     }
 
@@ -77,7 +78,7 @@ int main(int argc, const char *argv[]) {
     for (int j = 0; j < number_departures; j++) {
       Plane current_plane(flight_number++, current_time, departing);
       bool flag = true;
-      if (Takingoff_runway.can_depart(current_plane) != success){ 
+      if (Takingoff_runway.can_depart(current_plane) != success) {
         current_plane.refuse();
         flag = false;
       }
@@ -93,21 +94,21 @@ int main(int argc, const char *argv[]) {
           if (Reserve_runway.landingQueueEmpty()) {
             if (++j >= number_departures) break;
             Plane current_plane_2(flight_number++, current_time, departing);
-              if (Reserve_runway.can_depart(current_plane_2) != success) {
-                current_plane_2.refuse();
-                --j;
-                --flight_number;
-              }
+            if (Reserve_runway.can_depart(current_plane_2) != success) {
+              current_plane_2.refuse();
+              --j;
+              --flight_number;
+            }
           }
         }
       } else if (Landing_runway.landingQueueEmpty()) {
-          if (Landing_runway.can_depart(current_plane) != success) {
-            current_plane.refuse();
-          }
+        if (Landing_runway.can_depart(current_plane) != success) {
+          current_plane.refuse();
+        }
       } else if (Reserve_runway.landingQueueEmpty()) {
-          if (Reserve_runway.can_depart(current_plane) != success) {
-            current_plane.refuse();
-          }
+        if (Reserve_runway.can_depart(current_plane) != success) {
+          current_plane.refuse();
+        }
       }
     }
     Plane moving_plane_1;
@@ -124,7 +125,7 @@ int main(int argc, const char *argv[]) {
       case idle:
         run_idle(current_time);
         break;
-      default : 
+      default:
         cout << "nothing happened.";
         break;
     }
@@ -141,7 +142,8 @@ int main(int argc, const char *argv[]) {
       case idle:
         run_idle(current_time);
         break;
-      default : break;
+      default:
+        break;
     }
     Plane moving_plane_3;
     cout << "In reserved runway : " << endl;
@@ -156,19 +158,25 @@ int main(int argc, const char *argv[]) {
       case idle:
         run_idle(current_time);
         break;
-      default : break;
+      default:
+        break;
     }
   }
   ofstream fl("./data/summary.txt", std::ios_base::app);
-  fl << endl << "The Landing Runway : ";
+  fl << "Problem 4 : " << endl
+     << "Limit number :\t" << queue_limit << endl
+     << "End time :\t" << end_time << endl
+     << "Arrival rate :\t" << arrival_rate << endl
+     << "Departure rate :\t" << departure_rate << endl
+     << "The Landing Runway : " << endl;
   fl.close();
   Landing_runway.shut_down(end_time);
   fl.open("./data/summary.txt", std::ios_base::app);
-  fl << "The Takingoff Runway : ";
+  fl << "The Takingoff Runway : " << endl;
   fl.close();
   Takingoff_runway.shut_down(end_time);
   fl.open("./data/summary.txt", std::ios_base::app);
-  fl << "The Reserve Runway : ";
+  fl << "The Reserve Runway : " << endl;
   fl.close();
   Reserve_runway.shut_down(end_time);
   return 0;
@@ -179,15 +187,19 @@ void initialize(int &end_time, int &queue_limit, double &arrival_rate,
   cout << "This program simulates an airport with only one runway." << endl
        << "One plane can land or depart in each unit of time." << endl;
   cout << "Up to what number of planes can be waiting to land "
-       << "or take off at any time " << endl << "Limit number:\t";
+       << "or take off at any time " << endl
+       << "Limit number:\t";
   cin >> queue_limit;
-  cout << "How many units of time will the simulation run?" << endl << "End time: \t";
+  cout << "How many units of time will the simulation run?" << endl
+       << "End time: \t";
   cin >> end_time;
   bool acceptable = false;
   do {
-    cout << "Expected number of arrivals per unit time?" << endl << "Arrival rate:\t";
+    cout << "Expected number of arrivals per unit time?" << endl
+         << "Arrival rate:\t";
     cin >> arrival_rate;
-    cout << "Expected number of departures per unit time?" << endl << "Departure rate:\t";
+    cout << "Expected number of departures per unit time?" << endl
+         << "Departure rate:\t";
     cin >> departure_rate;
     if (arrival_rate < 0.0 || departure_rate < 0.0)
       cerr << "These rates must be nonnegative." << endl;
@@ -195,9 +207,9 @@ void initialize(int &end_time, int &queue_limit, double &arrival_rate,
       acceptable = true;
     if (acceptable && arrival_rate + departure_rate > 1.0)
       cerr << "Satety Warning: This airport will become saturated. " << endl;
-    cout << "------------------------------------------------------------------" << endl;
+    cout << "------------------------------------------------------------------"
+         << endl;
   } while (!acceptable);
 }
 
 void run_idle(int time) { cout << time << ":\tRunway is idle." << endl; }
-

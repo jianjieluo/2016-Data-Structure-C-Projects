@@ -83,8 +83,7 @@ void Runway::shut_down(int time) const {
   if (!s) {
     cout << "Can't open the data file";
   } else {
-    s << endl
-      << "Sumualation has conluded after " << time << " time units." << endl
+    s << "Sumualation has conluded after " << time << " time units." << endl
       << "Total number of planes processed \t\t\t"
       << (num_land_requests + num_takeoff_requests) << endl
       << "Total number of planes asking to land \t\t" << (num_land_requests)
@@ -115,6 +114,7 @@ void Runway::shut_down(int time) const {
       << ((float)num_land_requests) / ((float)time) << " per time unit" << endl;
     s << "Average obserbed rate of planes wanting to take off \t"
       << ((float)num_takeoff_requests) / ((float)time) << " per time unit"
+      << endl
       << endl;
     s.close();
     std::cout << "Write down to the data file successfully" << std::endl;

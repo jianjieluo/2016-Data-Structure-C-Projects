@@ -11,8 +11,8 @@
 // #include "Plane.hpp"
 #include <fstream>
 #include "Extended_queue.hpp"
-#include "Random.hpp"
 #include "Runway.hpp"
+#include "Random.hpp"
 using namespace std;
 
 void initialize(int &end_time, int &queue_limit, double &arrival_rate,
@@ -26,69 +26,46 @@ int main(int argc, const char *argv[]) {
   double arrival_rate, departure_rate;
   initialize(end_time, queue_limit, arrival_rate, departure_rate);
   Random variable(false);
-  Runway Landing_runway(queue_limit);
-  Runway Takingoff_runway(queue_limit);
+  Runway small_airport(queue_limit);
+  
   for (int current_time = 0; current_time < end_time; current_time++) {
     // loop over time intervals
-
+    cout << "Please input the number of planes to deal in this time unit : ";
+      cout << current_time << endl;
+      cout << "Please input the number of planes to arrive : ";
     // current arrival requests
-    int number_arrivals = variable.poisson(arrival_rate);
+    int number_arrivals;
+    cin >> number_arrivals;
     for (int i = 0; i < number_arrivals; i++) {
       Plane current_plane(flight_number++, current_time, arriving);
-      if (Landing_runway.can_land(current_plane) != success)
+      if (small_airport.can_land(current_plane) != success)
         current_plane.refuse();
     }
 
+    cout << "Please input the number of planes to depart : ";
     // current departure requests
-    int number_departures = variable.poisson(departure_rate);
+    int number_departures;
+    cin >> number_departures;
     for (int j = 0; j < number_departures; j++) {
       Plane current_plane(flight_number++, current_time, departing);
-      if (Takingoff_runway.can_depart(current_plane) != success)
+      if (small_airport.can_depart(current_plane) != success)
         current_plane.refuse();
     }
 
-    Plane moving_plane_1;
-    cout << "In landing runway : " << endl;
-    switch (Landing_runway.activity(current_time, moving_plane_1)) {
+    Plane moving_plane;
+    switch (small_airport.activity(current_time, moving_plane)) {
       // let at most one Plane onto the Runway at current_time
       case land:
-        moving_plane_1.land(current_time);
+        moving_plane.land(current_time);
         break;
-      // case takeoff:
-      //   moving_plane.fly(current_time);
-      //   break;
-      case idle:
-        run_idle(current_time);
-      default:
-        break;
-    }
-    Plane moving_plane_2;
-    cout << "In takingoff runway : " << endl;
-    switch (Takingoff_runway.activity(current_time, moving_plane_2)) {
-      // let at most one Plane onto the Runway at current_time
       case takeoff:
-        moving_plane_2.fly(current_time);
+        moving_plane.fly(current_time);
         break;
       case idle:
         run_idle(current_time);
-      default:
-        break;
     }
   }
-  ofstream fl("./data/summary.txt", std::ios_base::app);
-  fl << "Problem 2 : " << endl
-     << "Limit number :\t" << queue_limit << endl
-     << "End time :\t" << end_time << endl
-     << "Arrival rate :\t" << arrival_rate << endl
-     << "Departure rate :\t" << departure_rate << endl
-     << "The Landing Runway : " << endl;
-  fl.close();
-  Landing_runway.shut_down(end_time);
-  fl.open("./data/summary.txt", std::ios_base::app);
-  fl << "The Takingoff Runway : " << endl;
-  fl.close();
-  Takingoff_runway.shut_down(end_time);
-  return 0;
+  small_airport.shut_down(end_time);
 }
 
 void initialize(int &end_time, int &queue_limit, double &arrival_rate,
@@ -96,28 +73,32 @@ void initialize(int &end_time, int &queue_limit, double &arrival_rate,
   cout << "This program simulates an airport with only one runway." << endl
        << "One plane can land or depart in each unit of time." << endl;
   cout << "Up to what number of planes can be waiting to land "
-       << "or take off at any time " << endl
-       << "Limit number:\t";
+       << "or take off at any time " << endl << "Limit number:\t";
   cin >> queue_limit;
-  cout << "How many units of time will the simulation run?" << endl
-       << "End time: \t";
+  cout << "How many units of time will the simulation run?" << endl << "End time: \t";
   cin >> end_time;
   bool acceptable = false;
   do {
-    cout << "Expected number of arrivals per unit time?" << endl
-         << "Arrival rate:\t";
-    cin >> arrival_rate;
-    cout << "Expected number of departures per unit time?" << endl
-         << "Departure rate:\t";
-    cin >> departure_rate;
+//    cout << "Expected number of arrivals per unit time?" << endl << "Arrival rate:\t";
+//    cin >> arrival_rate;
+//    cout << "Expected number of departures per unit time?" << endl << "Departure rate:\t";
+//    cin >> departure_rate;
     if (arrival_rate < 0.0 || departure_rate < 0.0)
       cerr << "These rates must be nonnegative." << endl;
-    else
+    else {
       acceptable = true;
+        std::ofstream s("../data/summary.txt", std::ios_base::app);
+        if (!s) cout << 1233333;
+        else {
+            s << endl;
+            s << "The queue limit:  \t\t\t\t\t" << queue_limit << endl;
+            s << "The arrival rate: \t\t\t\t\t" << arrival_rate << endl;
+            s << "The departure rate: \t\t\t\t\t" << departure_rate << endl;
+        }
+    }
     if (acceptable && arrival_rate + departure_rate > 1.0)
       cerr << "Satety Warning: This airport will become saturated. " << endl;
-    cout << "------------------------------------------------------------------"
-         << endl;
+    cout << "------------------------------------------------------------------" << endl;
   } while (!acceptable);
 }
 

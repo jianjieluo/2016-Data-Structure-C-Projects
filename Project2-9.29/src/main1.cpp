@@ -59,6 +59,13 @@ int main(int argc, const char *argv[]) {
         run_idle(current_time);
     }
   }
+  ofstream of("./data/summary.txt", std::ios_base::app);
+  of << "Problem 1 : " << endl;
+  of << "Limit number :\t" << queue_limit << endl
+     << "End time :\t" << end_time << endl
+     << "Arrival rate :\t" << arrival_rate << endl
+     << "Departure rate :\t" << departure_rate << endl;
+  of.close();
   small_airport.shut_down(end_time);
 }
 
