@@ -61,23 +61,7 @@ $(BUILD_DIR)/Runway.o : $(SRC_DIR)/Runway.cpp
 	@mkdir -p $(BUILD_DIR)
 	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
 
-$(BUILD_DIR)/main1.o : $(SRC_DIR)/main1.cpp $(INC_DIR)/Extended_queue.hpp $(SRC_DIR)/Extended_queue.cpp
-	@mkdir -p $(BUILD_DIR)
-	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
-
-$(BUILD_DIR)/main2.o : $(SRC_DIR)/main2.cpp $(INC_DIR)/Extended_queue.hpp $(SRC_DIR)/Extended_queue.cpp
-	@mkdir -p $(BUILD_DIR)
-	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
-
-$(BUILD_DIR)/main3.o : $(SRC_DIR)/main3.cpp $(INC_DIR)/Extended_queue.hpp $(SRC_DIR)/Extended_queue.cpp
-	@mkdir -p $(BUILD_DIR)
-	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
-
-$(BUILD_DIR)/main4.o : $(SRC_DIR)/main4.cpp $(INC_DIR)/Extended_queue.hpp $(SRC_DIR)/Extended_queue.cpp
-	@mkdir -p $(BUILD_DIR)
-	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
-
-$(BUILD_DIR)/main6.o : $(SRC_DIR)/main6.cpp $(INC_DIR)/Extended_queue.hpp $(SRC_DIR)/Extended_queue.cpp
+$(BUILD_DIR)/main%.o : $(SRC_DIR)/main%.cpp $(SRC_DIR)/Extended_queue.cpp
 	@mkdir -p $(BUILD_DIR)
 	$(CC) $(CXXFLAGS) $(INC) -c $< -o $@
 
