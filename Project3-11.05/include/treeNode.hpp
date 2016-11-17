@@ -27,7 +27,7 @@ class treeNode {
   void setVersion(int t_version);
   int getVersion() const;
 
-  void setPersonInfo();
+  void setPersonInfo(const personInfo& t_m_info);
   void showPersonInfo() const;
   personInfo* getPersonInfo() const;
 
