@@ -8,15 +8,16 @@ struct personInfo {
   std::string birthday;  // format (xxxx-xx-xx)
   std::string deathday;  // format (xxxx-xx-xx)
   std::string fatherName;
+  bool status;
 
-  personInfo(int _a, std::string _n, std::string _b, std::string _d,
-             std::string _f)
-      : age(_a), name(_n), birthday(_b), deathday(_d), fatherName(_f) {}
+  personInfo(int _a = 0, std::string _n = "", std::string _b = "", std::string _d = "",
+             std::string _f = "", bool _s = true)
+      : age(_a), name(_n), birthday(_b), deathday(_d), fatherName(_f), status(_s) {}
 
   /**
    * cout the Info in a relative good form
    */
-  void showInfo() const;
+  void showInfo(int version) const;
 };
 
 class treeNode {
@@ -27,16 +28,18 @@ class treeNode {
   void setVersion(int t_version);
   int getVersion() const;
 
-  void setPersonInfo();
-  void showPersonInfo() const;
+  void setPersonInfo(const personInfo& t_m_info);
+  void showPersonInfo() const ;
   personInfo* getPersonInfo() const;
 
   void setWifeInfo(const personInfo& t_wife_info);
   void showWifeInfo() const;
   personInfo* getWifeInfo() const;
 
+  void setFirstSon(treeNode& firstSon);
+  void setNextBrother(treeNode& nextBrother);
   treeNode* getFirstSon() const;
-  treeNode* getNextBrother() const;
+  treeNode* getNextBrother();
 
  private:
   int m_version;
