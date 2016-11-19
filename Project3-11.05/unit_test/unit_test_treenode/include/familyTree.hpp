@@ -18,9 +18,9 @@ class familyTree {
   ~familyTree();
 
   // delete the current node and its subnodes.
-  bool deleteNode(const std::string t_name);
-  bool insertPersonNode(const std::string t_father_name);
-  bool resetPersonWifeInfo(const std::string t_name);
+  bool deleteNodeByName(const std::string t_name);
+  bool insertPersonNode(const std::string t_father_name, treeNode& t_person);
+  bool resetPersonWifeInfo(const std::string t_name, personInfo& t_wife);
 
   treeNode* searchPersonByName(const std::string t_name);
   // You just need to travesal the tree and push the right treeNode printer into
@@ -37,7 +37,12 @@ class familyTree {
   // if we have time, we can use nodejs and construct a web diplay
   void displayTree() const;
 
+  bool readFromFile();
+  bool writeToFile();
+
+
  private:
+  treeNode* m_root;
   bool sync() const;
   std::string m_family_tree_name;
   int m_all_person_num;

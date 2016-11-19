@@ -23,16 +23,17 @@ struct personInfo {
 class treeNode {
  public:
   treeNode();
+  treeNode(treeNode& person);
   ~treeNode();
 
   void setVersion(int t_version);
   int getVersion() const;
 
-  void setPersonInfo(const personInfo& t_m_info);
+  void setPersonInfo(const personInfo* t_m_info);
   void showPersonInfo() const ;
   personInfo* getPersonInfo() const;
 
-  void setWifeInfo(const personInfo& t_wife_info);
+  void setWifeInfo(const personInfo* t_wife_info);
   void showWifeInfo() const;
   personInfo* getWifeInfo() const;
 

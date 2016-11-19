@@ -11,6 +11,14 @@ treeNode::treeNode() {
 	m_first_son = m_next_brother = NULL;
 }
 
+treeNode::treeNode(treeNode& person) {
+	m_version = person.m_version;
+	setPersonInfo(person.getPersonInfo());
+	setWifeInfo(person.getWifeInfo());
+	m_first_son = person.getFirstSon();
+	m_next_brother = person.getNextBrother();
+}
+
 treeNode::~treeNode() {
 	delete m_info;
 	delete m_wife;
@@ -25,8 +33,9 @@ int treeNode::getVersion() const {
 	return m_version;
 }
 
-void treeNode::setPersonInfo(const personInfo& t_m_info) {
-	m_info = new personInfo(t_m_info.age, t_m_info.name, t_m_info.birthday, t_m_info.deathday, t_m_info.fatherName, t_m_info.status);
+void treeNode::setPersonInfo(const personInfo* t_m_info) {
+	if (t_m_info != NULL)
+	m_info = new personInfo(t_m_info->age, t_m_info->name, t_m_info->birthday, t_m_info->deathday, t_m_info->fatherName, t_m_info->status);
 }
 
 void treeNode::showPersonInfo() const {
@@ -62,8 +71,9 @@ personInfo* treeNode::getPersonInfo() const {
 	return m_info;
 }
 
-void treeNode::setWifeInfo(const personInfo& t_wife_info) {
-	m_wife = new personInfo(t_wife_info.age, t_wife_info.name, t_wife_info.birthday, t_wife_info.deathday, t_wife_info.fatherName, t_wife_info.status);
+void treeNode::setWifeInfo(const personInfo* t_wife_info) {
+	if (t_wife_info != NULL)
+	m_wife = new personInfo(t_wife_info->age, t_wife_info->name, t_wife_info->birthday, t_wife_info->deathday, t_wife_info->fatherName, t_wife_info->status);
 }
 
 personInfo* treeNode::getWifeInfo() const {
@@ -84,7 +94,7 @@ void treeNode::setNextBrother(treeNode& nextBrother) {
 		while (bro->getNextBrother() != NULL)
 			bro = bro->getNextBrother();
 		bro->setNextBrother(nextBrother);
-		// nextBrother.showPersonInfo();
+		// nextBrothershowPersonInfo();
 	}
 }
 
@@ -96,32 +106,32 @@ treeNode* treeNode::getNextBrother() {
 	return m_next_brother;
 }
 
-int main() {
-	treeNode me;
-	personInfo m(18, "Zeongwan", "2012-01-01", "2100-02-02", "siwu", true);
-	personInfo m_wife(18, "wy", "2012-02-01", "2100-01-02", "dont know", true);
-	me.setPersonInfo(m);
-	me.setWifeInfo(m_wife);
-	// me.showPersonInfo();
-	// me.showWifeInfo();
+// int main() {
+// 	treeNode me;
+// 	personInfo m(18, "Zeongwan", "2012-01-01", "2100-02-02", "siwu", true);
+// 	personInfo m_wife(18, "wy", "2012-02-01", "2100-01-02", "dont know", true);
+// 	me.setPersonInfo(&m);
+// 	me.setWifeInfo(&m_wife);
+// 	// me.showPersonInfo();
+// 	// me.showWifeInfo();
 
-	// treeNode son;
-	// personInfo m_son(10, "dont", "2020-01-02", "2200-01-02", "Zeongwan", true);
-	// son.setPersonInfo(m_son);
-	// me.setFirstSon(son);
-	// me.getFirstSon()->showPersonInfo();
+// 	// treeNode son;
+// 	// personInfo m_son(10, "dont", "2020-01-02", "2200-01-02", "Zeongwan", true);
+// 	// son.setPersonInfo(m_son);
+// 	// me.setFirstSon(son);
+// 	// me.getFirstSon()->showPersonInfo();
 
-	treeNode brother;
-	personInfo m_bro(20, "Zhoufeng", "2012-02-02", "2100-12-02", "Zhouwu", true);
-	brother.setPersonInfo(m_bro);
-	me.setNextBrother(brother);
-	me.getNextBrother()->showPersonInfo();
+// 	treeNode brother;
+// 	personInfo m_bro(20, "Zhoufeng", "2012-02-02", "2100-12-02", "Zhouwu", true);
+// 	brother.setPersonInfo(&m_bro);
+// 	me.setNextBrother(brother);
+// 	me.getNextBrother()->showPersonInfo();
 
-	treeNode brother2;
-	personInfo m_bro2(20, "Zhoufeng2", "2012-02-02", "2100-12-02", "Zhouwu", true);
-	brother2.setPersonInfo(m_bro2);
-	me.setNextBrother(brother2);
-	me.getNextBrother()->getNextBrother()->showPersonInfo();
+// 	treeNode brother2;
+// 	personInfo m_bro2(20, "Zhoufeng2", "2012-02-02", "2100-12-02", "Zhouwu", true);
+// 	brother2.setPersonInfo(&m_bro2);
+// 	me.setNextBrother(brother2);
+// 	me.getNextBrother()->getNextBrother()->showPersonInfo();
 
-	return 0;
-}
+// 	return 0;
+// }
