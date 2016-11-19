@@ -48,6 +48,8 @@ bool familyTree::deleteNodeByName(const string t_name) {
     return true;
 }
 
+
+// passs
 bool familyTree::insertPersonNode(const string t_father_name, treeNode& t_person) {
     if (m_root == NULL) {
         m_root = new treeNode(t_person);
@@ -55,12 +57,15 @@ bool familyTree::insertPersonNode(const string t_father_name, treeNode& t_person
         return true;
     }
     treeNode* father = searchPersonByName(t_father_name);
-    if (father == NULL)
-    return false;
+    if (father == NULL) {
+        cout << "\nCan't find your father : " << t_father_name << endl;
+        return false;
+    }
     if (father->getFirstSon() == NULL) {
         father->setFirstSon(t_person); // 应该设定为set
     }
     else {
+        
         treeNode* bro = father->getFirstSon();
         while (bro->getNextBrother() != NULL) {
             bro = bro->getNextBrother();
@@ -78,6 +83,8 @@ bool familyTree::resetPersonWifeInfo(const string t_name, personInfo& t_wife) {
     return true;
 }
 
+
+// pase
 treeNode* familyTree::searchPersonByName(const string t_name) {
     treeNode* ptr = m_root;
     while (ptr != NULL) {
@@ -200,6 +207,7 @@ bool familyTree::readFromFile() {
             me.setPersonInfo(&person);
             // me.showPersonInfo();
             insertPersonNode(sfathername, me);
+            // cout << endl << sfathername << endl;
         }
         count++;
         // cout << s << endl;
@@ -254,5 +262,7 @@ int main() {
     familyTree ft("a.txt");
     ft.readFromFile();
     ft.displayTree();
+    // cout << endl << "kyo" << endl;
+    // ft.searchPersonByName("kiyo")->showPersonInfo();
     return 0;
 }
