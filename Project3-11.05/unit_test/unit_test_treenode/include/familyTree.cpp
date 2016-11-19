@@ -2,32 +2,53 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <vector>
 using namespace std;
+
+// pass
 bool familyTree::deleteNode(treeNode *t_root) {
   if (t_root == NULL)
     return false;
+  treeNode *father = findFather(t_root->getPersonInfo()->name);
+  father->setFirstSon(*(t_root->getNextBrother()));
+  std::vector<treeNode *> v;
+  treeNode *ptr = t_root->getFirstSon();
+  while (ptr != NULL) {
+    v.push_back(ptr);
+    treeNode *brother = ptr->getNextBrother();
+    while (brother != NULL) {
+      v.push_back(brother);
+      brother = brother->getNextBrother();
+    }
+    ptr = ptr->getFirstSon();
+  }
+  for (auto i = v.begin(); i != v.end(); i++)
+    delete *i;
   delete t_root;
+  // cout << "-----------------------fuck you -------------------------\n";
+  // displayTree();
+  // cout << "-----------------------fuck you -------------------------\n";
   return true;
 }
 
-treeNode *familyTree::searchPersonByName(treeNode *t_root,
-                                         const std::string t_name) {
-  if (t_root->getPersonInfo()->name == t_name)
-    return t_root;
-  treeNode *son = t_root->getFirstSon();
-  while (son != NULL) {
-    if (son->getPersonInfo()->name == t_name)
-      return son;
-    treeNode *bro = son->getNextBrother();
-    while (bro != NULL) {
-      if (bro->getPersonInfo()->name == t_name)
-        return bro;
-      bro = bro->getNextBrother();
-    }
-    son = son->getFirstSon();
-  }
-  return NULL;
-}
+// treeNode *familyTree::searchPersonByName(treeNode *t_root,
+//                                          const std::string t_name) {
+//   if (t_root->getPersonInfo()->name == t_name)
+//     return t_root;
+//   treeNode *son = t_root->getFirstSon();
+//   while (son != NULL) {
+//     if (son->getPersonInfo()->name == t_name)
+//       return son;
+//     treeNode *bro = son->getNextBrother();
+//     while (bro != NULL) {
+//       if (bro->getPersonInfo()->name == t_name)
+//         return bro;
+//       bro = bro->getNextBrother();
+//     }
+//     son = son->getFirstSon();
+//   }
+//   return NULL;
+// }
 
 familyTree::familyTree() {
   m_root = NULL;
@@ -42,12 +63,10 @@ familyTree::familyTree(const string data_path) {
   sync();
 }
 
-familyTree::~familyTree() {}
+familyTree::~familyTree() { writeToFile(); }
 
 bool familyTree::deleteNodeByName(const string t_name) {
-  if (searchPersonByName(t_name) == NULL)
-    return false;
-  return true;
+  return deleteNode(searchPersonByName(t_name));
 }
 
 // pass
@@ -83,7 +102,7 @@ bool familyTree::resetPersonWifeInfo(const string t_name, personInfo &t_wife) {
   return true;
 }
 
-// pase
+// pass
 treeNode *familyTree::searchPersonByName(const string t_name) {
   treeNode *ptr = m_root;
   while (ptr != NULL) {
@@ -118,13 +137,15 @@ familyTree::searchPersonByFilter(std::function<bool(const treeNode *)> filter) {
   return v;
 }
 
+// pass
 int familyTree::brotherNumber(const string t_name) {
-  treeNode *ptr = searchPersonByName(t_name);
+  int ans = 0;
+  treeNode *ptr = findFather(t_name);
   if (ptr == NULL)
     return -1;
-  int ans;
-  while (ptr != NULL) {
-    ptr = ptr->getNextBrother();
+  treeNode *son = ptr->getFirstSon();
+  while (son != NULL) {
+    son = son->getNextBrother();
     ans++;
   }
   return ans;
@@ -264,7 +285,36 @@ void familyTree::displayTree() const {
     ptr = ptr->getFirstSon();
   }
 }
-bool familyTree::writeToFile() { return true; }
+bool familyTree::writeToFile() {
+  ofstream of;
+  of.open(m_data_path, ios::out);
+  if (!of.good())
+    return false;
+  of.clear();
+  treeNode *father = m_root;
+  while (father != NULL) {
+    of << '\"' << father->getPersonInfo()->age << '\"' << "," << '\"'
+       << father->getPersonInfo()->name << '\"' << "," << '\"'
+       << father->getPersonInfo()->birthday << '\"' << "," << '\"'
+       << father->getPersonInfo()->deathday << '\"' << "," << '\"'
+       << father->getPersonInfo()->fatherName << '\"' << "," << '\"'
+       << (father->getPersonInfo()->status ? "true" : "false") << '\"' << '\n';
+    treeNode *son = father->getFirstSon();
+    while (son != NULL) {
+      of << '\"' << son->getPersonInfo()->age << '\"' << "," << '\"'
+         << son->getPersonInfo()->name << '\"' << "," << '\"'
+         << son->getPersonInfo()->birthday << '\"' << "," << '\"'
+         << son->getPersonInfo()->deathday << '\"' << "," << '\"'
+         << son->getPersonInfo()->fatherName << '\"' << "," << '\"'
+         << (son->getPersonInfo()->status ? "true" : "false") << '\"' << '\n';
+      son = son->getNextBrother();
+    }
+    father = father->getFirstSon();
+  }
+
+  of.close();
+  return true;
+}
 
 bool familyTree::sync() const { return true; }
 
@@ -272,11 +322,16 @@ int main() {
   familyTree ft("a.csv");
   bool flag = ft.readFromFile();
   ft.displayTree();
-  cout << "Btother number of " << ft.brotherNumber("abcd") << endl;
+  cout << "Btother number of abcd" << ft.brotherNumber("abcd") << endl;
   cout << "The name of father of abcd is ";
   if (ft.findFather("abcd") != NULL)
     ft.findFather("abcd")->showPersonInfo();
   cout << endl;
+  cout << "the total people num is" << ft.getAllPersonNum() << endl;
+  cout << "the total alive people is" << ft.getLivePersonNum() << endl;
+  cout << "-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n";
+  if (ft.deleteNodeByName("abc"))
+    ft.displayTree();
   // cout << endl << "kyo" << endl;
   // ft.searchPersonByName("kiyo")->showPersonInfo();
   return 0;

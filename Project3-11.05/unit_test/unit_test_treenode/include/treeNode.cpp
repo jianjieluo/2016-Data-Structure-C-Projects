@@ -76,7 +76,10 @@ personInfo *treeNode::getWifeInfo() const { return m_wife; }
 
 //  这个需不需要考虑它会不会出现儿子是别人的问题
 void treeNode::setFirstSon(treeNode &firstSon) {
-  m_first_son = new treeNode(firstSon);
+  if (m_first_son == NULL)
+    m_first_son = new treeNode(firstSon);
+  else
+    m_first_son = &firstSon;
 }
 
 void treeNode::setNextBrother(treeNode &nextBrother) {
