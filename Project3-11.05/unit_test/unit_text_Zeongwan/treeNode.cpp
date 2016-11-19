@@ -74,6 +74,7 @@ void treeNode::setWifeInfo(const personInfo *t_wife_info) {
 
 personInfo *treeNode::getWifeInfo() const { return m_wife; }
 
+//  这个需不需要考虑它会不会出现儿子是别人的问题
 void treeNode::setFirstSon(treeNode &firstSon) {
   if (m_first_son == NULL)
     m_first_son = new treeNode(firstSon);
@@ -85,10 +86,12 @@ void treeNode::setNextBrother(treeNode &nextBrother) {
   if (m_next_brother == NULL)
     m_next_brother = new treeNode(nextBrother);
   else {
+    // cout << "hello" << endl;
     treeNode *bro = m_next_brother;
     while (bro->getNextBrother() != NULL)
       bro = bro->getNextBrother();
     bro->setNextBrother(nextBrother);
+    // nextBrothershowPersonInfo();
   }
 }
 
