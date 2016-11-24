@@ -18,6 +18,8 @@ void help() {
   std::cout << "6 -> search persons by version" << std::endl;
   std::cout << "7 -> get person's all sons" << std::endl;
   std::cout << "8 -> search persons by age" << std::endl;
+  std::cout << "9 -> add a person" << std::endl;
+  std::cout << "10 -> delete a person" << std::endl;
   std::cout << "------------------------------------" << std::endl;
 }
 
@@ -27,6 +29,7 @@ int main() {
   std::string str1, str2, str3;
   help();
   int temp = -1;
+  personInfo info;
   while (std::cin >> choice) {
     // switch (choice) {
     std::cout << "Please input a command" << std::endl;
@@ -105,7 +108,43 @@ int main() {
         manager->printQueryResult(ans);
       }
     }
-    if (!(choice >= 0 && choice <= 8)) {
+    if (choice == 9) {
+      std::cout << "插入的人的代数";
+      int version;
+      std::cin >> version;
+      std::cout << "生日日期和死亡日期需要以format (xxxx-xx-xx)" << std::endl;
+      std::cout << "status 1 代表活着， 0 代表死亡" << std::endl;
+      std::cout << "年龄"
+                << " "
+                << "姓名"
+                << " "
+                << "生日"
+                << " "
+                << "死亡日期"
+                << " "
+                << "父亲名字"
+                << " "
+                << "是否死亡" << std::endl;
+      std::cin >> info.age >> info.name >> info.birthday >> info.deathday >>
+          info.fatherName >> info.status;
+      auto t_treeNode = new treeNode(version, &info, NULL, NULL, NULL);
+      if (manager->addPersonNode(info.fatherName, *(t_treeNode))) {
+        std::cout << "add person successfully" << std::endl;
+      } else {
+        std::cout << "add person failed" << std::endl;
+      }
+    }
+    if (choice == 10) {
+      std::string name;
+      std::cout << "输入需要删除的人的名字" << std::endl;
+      std::cin >> name;
+      if (manager->deleteNodeByName(name)) {
+        std::cout << "Delete Successfully" << std::endl;
+      } else {
+        std::cout << "Delete failed" << std::endl;
+      }
+    }
+    if (!(choice >= 0 && choice <= 10)) {
       std::cout << "Invaild Input" << std::endl;
     }
     // break;

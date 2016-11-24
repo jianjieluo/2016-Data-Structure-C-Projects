@@ -6,6 +6,6 @@ class Path {
   static const char *familyDataPath;
 };
 
-const char *Path::familyDataPath = "data/data.csv";
+const char *Path::familyDataPath = "data/data.txt";
 
 #endif

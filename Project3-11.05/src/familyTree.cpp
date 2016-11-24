@@ -29,6 +29,25 @@ bool familyTree::deleteNode(treeNode *t_root) {
   return true;
 }
 
+// treeNode *familyTree::searchPersonByName(treeNode *t_root,
+//                                          const std::string t_name) {
+//   if (t_root->getPersonInfo()->name == t_name)
+//     return t_root;
+//   treeNode *son = t_root->getFirstSon();
+//   while (son != NULL) {
+//     if (son->getPersonInfo()->name == t_name)
+//       return son;
+//     treeNode *bro = son->getNextBrother();
+//     while (bro != NULL) {
+//       if (bro->getPersonInfo()->name == t_name)
+//         return bro;
+//       bro = bro->getNextBrother();
+//     }
+//     son = son->getFirstSon();
+//   }
+//   return NULL;
+// }
+
 familyTree::familyTree() {
   m_root = NULL;
   m_all_person_num = m_live_person_num = 0;
@@ -108,7 +127,6 @@ std::vector<treeNode *> familyTree::searchPersonByFilter(
       if (filter(son)) v.push_back(son);
       son = son->getNextBrother();
     }
-    father = father->getFirstSon();
   }
   return v;
 }
@@ -185,18 +203,44 @@ bool familyTree::readFromFile() {
     return false;
   }
   int count = 0;
-  string sage, sname, sbirthday, sdeathday, sfathername, sstatus;
+  string sage, sname, sbirthday, sdeathday, sfathername, sstatus, sversion;
+
   while (infile.good()) {
     string s;
     getline(infile, s, '\"');
     if (s == "" || s == "," || s == "\n") continue;
-    if (count % 6 == 0) sage = s;
-    if (count % 6 == 1) sname = s;
-    if (count % 6 == 2) sbirthday = s;
-    if (count % 6 == 3) sdeathday = s;
-    if (count % 6 == 4) sfathername = s;
-    if (count % 6 == 5) {
+    if (count % 7 == 0) {
+      sage = s;
+      //   cout << "\nsage:" << sage;
+    }
+    if (count % 7 == 1) {
+      sname = s;
+      // cout << "\nsnamge:" << sname;
+    }
+    if (count % 7 == 2) {
+      sbirthday = s;
+      //   cout << "\nsbirthday:" << sbirthday;
+    }
+    if (count % 7 == 3) {
+      sdeathday = s;
+      //   cout << "\nsdeathday:" << sdeathday;
+    }
+    if (count % 7 == 4) {
+      sfathername = s;
+      //   cout << "\nsfathername:" << sfathername;
+    }
+    if (count % 7 == 5) {
       sstatus = s;
+      //   cout << "\nsstatus:" << sstatus;
+    }
+    if (count % 7 == 6) {
+      int version;
+      sversion = s;
+      sstatus = s;
+      stringstream ssversion;
+      ssversion << s;
+      ssversion >> version;
+
       int age;
       stringstream ssage;
       ssage << sage;
@@ -204,21 +248,38 @@ bool familyTree::readFromFile() {
       bool status = (sstatus == "true" ? true : false);
       personInfo person(age, sname, sbirthday, sdeathday, sfathername, status);
       treeNode me;
+      me.setVersion(version);
       me.setPersonInfo(&person);
-      // me.showPersonInfo();
+
       insertPersonNode(sfathername, me);
-      // cout << endl << sfathername << endl;
     }
     count++;
     // cout << s << endl;
   }
+  // if (m_root == NULL) return true;
+  // treeNode* ptr = m_root;
+  // while(ptr != NULL) {
+  //     ptr->showPersonInfo();
+  //     treeNode* bro = ptr->getNextBrother();
+  //     while (bro != NULL) {
+  //         bro->showPersonInfo();
+  //         bro = bro->getNextBrother();
+  //     }
+  //     ptr = ptr->getFirstSon();
+  // }
   infile.close();
+  // cout << age << endl;
+  // cout << name << endl;
+  // cout << birthday << endl;
+  // cout << deathday << endl;
+  // cout << fathername << endl;
+  // cout << status << endl;
   return true;
 }
 void familyTree::displayTree() const {
   if (m_root == NULL) return;
   if (m_root->getPersonInfo() == NULL) {
-    cout << "fuck" << endl;
+    // cout << "fuck" << endl;
     return;
   }
   treeNode *ptr = m_root;
@@ -243,7 +304,8 @@ bool familyTree::writeToFile() {
      << father->getPersonInfo()->birthday << '\"' << "," << '\"'
      << father->getPersonInfo()->deathday << '\"' << "," << '\"'
      << father->getPersonInfo()->fatherName << '\"' << "," << '\"'
-     << (father->getPersonInfo()->status ? "true" : "false") << '\"' << '\n';
+     << (father->getPersonInfo()->status ? "true" : "false") << '\"' << ","
+     << '\"' << father->getVersion() << '\"' << '\n';
   while (father != NULL) {
     treeNode *son = father->getFirstSon();
     while (son != NULL) {
@@ -252,7 +314,8 @@ bool familyTree::writeToFile() {
          << son->getPersonInfo()->birthday << '\"' << "," << '\"'
          << son->getPersonInfo()->deathday << '\"' << "," << '\"'
          << son->getPersonInfo()->fatherName << '\"' << "," << '\"'
-         << (son->getPersonInfo()->status ? "true" : "false") << '\"' << '\n';
+         << (son->getPersonInfo()->status ? "true" : "false") << '\"' << ","
+         << '\"' << son->getVersion() << '\"' << '\n';
       son = son->getNextBrother();
     }
     father = father->getFirstSon();
