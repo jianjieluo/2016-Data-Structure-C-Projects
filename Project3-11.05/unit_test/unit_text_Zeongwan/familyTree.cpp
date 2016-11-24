@@ -292,13 +292,14 @@ bool familyTree::writeToFile() {
     return false;
   of.clear();
   treeNode *father = m_root;
-  while (father != NULL) {
     of << '\"' << father->getPersonInfo()->age << '\"' << "," << '\"'
        << father->getPersonInfo()->name << '\"' << "," << '\"'
        << father->getPersonInfo()->birthday << '\"' << "," << '\"'
        << father->getPersonInfo()->deathday << '\"' << "," << '\"'
        << father->getPersonInfo()->fatherName << '\"' << "," << '\"'
        << (father->getPersonInfo()->status ? "true" : "false") << '\"' << '\n';
+  while (father != NULL) {
+
     treeNode *son = father->getFirstSon();
     while (son != NULL) {
       of << '\"' << son->getPersonInfo()->age << '\"' << "," << '\"'
@@ -322,16 +323,16 @@ int main() {
   familyTree ft("a.csv");
   bool flag = ft.readFromFile();
   ft.displayTree();
-  cout << "Btother number of abcd" << ft.brotherNumber("abcd") << endl;
-  cout << "The name of father of abcd is ";
-  if (ft.findFather("abcd") != NULL)
-    ft.findFather("abcd")->showPersonInfo();
-  cout << endl;
-  cout << "the total people num is" << ft.getAllPersonNum() << endl;
-  cout << "the total alive people is" << ft.getLivePersonNum() << endl;
-  cout << "-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n";
-  if (ft.deleteNodeByName("abc"))
-    ft.displayTree();
+  // cout << "Btother number of abcd" << ft.brotherNumber("abcd") << endl;
+  // cout << "The name of father of abcd is ";
+  // if (ft.findFather("abcd") != NULL)
+  //   ft.findFather("abcd")->showPersonInfo();
+  // cout << endl;
+  // cout << "the total people num is" << ft.getAllPersonNum() << endl;
+  // cout << "the total alive people is" << ft.getLivePersonNum() << endl;
+  // cout << "-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n-\n";
+  // if (ft.deleteNodeByName("abc"))
+  //   ft.displayTree();
   // cout << endl << "kyo" << endl;
   // ft.searchPersonByName("kiyo")->showPersonInfo();
   return 0;
