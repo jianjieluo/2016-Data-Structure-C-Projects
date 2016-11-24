@@ -21,6 +21,7 @@ void help() {
   std::cout << "8 -> search persons by age" << std::endl;
   std::cout << "9 -> add a person" << std::endl;
   std::cout << "10 -> delete a person" << std::endl;
+  std::cout << "11 -> display the tree structure" << std::endl;
   std::cout << "------------------------------------" << std::endl;
 }
 
@@ -128,10 +129,15 @@ int main() {
         std::cout << "Delete failed" << std::endl;
       }
     }
-    if (!(choice >= 0 && choice <= 10)) {
+    if (choice == 11) {
+      std::cout << "The structure of the tree is:" << std::endl;
+      manager->displayStructure();
+    }
+    if (!(choice >= 0 && choice <= 11)) {
       std::cout << "Invaild Input" << std::endl;
     }
   }
+  manager->deleteFamilyTree();
   std::cout << "Good Bye" << std::endl;
   return 0;
 }

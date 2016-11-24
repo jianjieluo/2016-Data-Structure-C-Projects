@@ -2,6 +2,7 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <string>
 #include <vector>
 using namespace std;
 
@@ -28,25 +29,6 @@ bool familyTree::deleteNode(treeNode *t_root) {
   // cout << "-----------------------fuck you -------------------------\n";
   return true;
 }
-
-// treeNode *familyTree::searchPersonByName(treeNode *t_root,
-//                                          const std::string t_name) {
-//   if (t_root->getPersonInfo()->name == t_name)
-//     return t_root;
-//   treeNode *son = t_root->getFirstSon();
-//   while (son != NULL) {
-//     if (son->getPersonInfo()->name == t_name)
-//       return son;
-//     treeNode *bro = son->getNextBrother();
-//     while (bro != NULL) {
-//       if (bro->getPersonInfo()->name == t_name)
-//         return bro;
-//       bro = bro->getNextBrother();
-//     }
-//     son = son->getFirstSon();
-//   }
-//   return NULL;
-// }
 
 familyTree::familyTree() {
   m_root = NULL;
@@ -254,32 +236,13 @@ bool familyTree::readFromFile() {
       insertPersonNode(sfathername, me);
     }
     count++;
-    // cout << s << endl;
   }
-  // if (m_root == NULL) return true;
-  // treeNode* ptr = m_root;
-  // while(ptr != NULL) {
-  //     ptr->showPersonInfo();
-  //     treeNode* bro = ptr->getNextBrother();
-  //     while (bro != NULL) {
-  //         bro->showPersonInfo();
-  //         bro = bro->getNextBrother();
-  //     }
-  //     ptr = ptr->getFirstSon();
-  // }
   infile.close();
-  // cout << age << endl;
-  // cout << name << endl;
-  // cout << birthday << endl;
-  // cout << deathday << endl;
-  // cout << fathername << endl;
-  // cout << status << endl;
   return true;
 }
 void familyTree::displayTree() const {
   if (m_root == NULL) return;
   if (m_root->getPersonInfo() == NULL) {
-    // cout << "fuck" << endl;
     return;
   }
   treeNode *ptr = m_root;
@@ -326,3 +289,23 @@ bool familyTree::writeToFile() {
 }
 
 bool familyTree::sync() const { return true; }
+
+void displayName(treeNode *temp) {
+  int count = temp->getVersion() - 1;
+  while (count--) {
+    std::cout << "    ";
+  }
+  std::cout << temp->getPersonInfo()->name << std::endl;
+}
+
+void familyTree::precede(treeNode *temp) {
+  displayName(temp);
+  treeNode *tempFirstSon = temp->getFirstSon();
+  treeNode *tempNextBrother = temp->getNextBrother();
+  if (tempFirstSon) {
+    precede(tempFirstSon);
+  }
+  if (tempNextBrother) {
+    precede(tempNextBrother);
+  }
+}

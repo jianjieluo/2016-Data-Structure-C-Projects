@@ -61,6 +61,7 @@ class familyTreeManager {
   std::vector<treeNode *> searchPersonByVersion(int t_version) const;
   std::vector<treeNode *> searchFarterAllSon(std::string t_father_name) const;
   void printQueryResult(std::vector<treeNode *> &res);
+  void displayStructure() { m_manager->precede(m_manager->getRoot()); }
 
  private:
   familyTree *m_manager;
