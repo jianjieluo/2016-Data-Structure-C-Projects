@@ -15,8 +15,14 @@ treeNode::treeNode(int version, personInfo *info, personInfo *wife,
   m_version = version;
   setPersonInfo(info);
   setWifeInfo(wife);
-  setFirstSon(*firstSon);
-  setNextBrother(*nextBrother);
+  if (firstSon)
+    setFirstSon(*firstSon);
+  else
+    m_first_son = NULL;
+  if (nextBrother)
+    setNextBrother(*nextBrother);
+  else
+    m_next_brother = NULL;
 }
 
 treeNode::treeNode(treeNode &person) {
@@ -77,10 +83,13 @@ void treeNode::showWifeInfo() const {
 personInfo *treeNode::getPersonInfo() const { return m_info; }
 
 void treeNode::setWifeInfo(const personInfo *t_wife_info) {
-  if (t_wife_info != NULL)
+  if (t_wife_info != NULL) {
     m_wife = new personInfo(t_wife_info->age, t_wife_info->name,
                             t_wife_info->birthday, t_wife_info->deathday,
                             t_wife_info->fatherName, t_wife_info->status);
+  } else {
+    m_wife = NULL;
+  }
 }
 
 personInfo *treeNode::getWifeInfo() const { return m_wife; }
