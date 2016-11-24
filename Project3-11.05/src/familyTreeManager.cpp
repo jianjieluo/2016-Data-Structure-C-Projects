@@ -83,7 +83,7 @@ std::vector<treeNode*> familyTreeManager::searchFarterAllSon(
   treeNode* t_father = searchPersonByName(t_father_name);
   treeNode* p1 = t_father->getFirstSon();
   std::vector<treeNode*> v;
-  while (!p1) {
+  while (p1 != NULL) {
     v.push_back(p1);
     p1 = p1->getNextBrother();
   }
@@ -91,18 +91,7 @@ std::vector<treeNode*> familyTreeManager::searchFarterAllSon(
 }
 
 void familyTreeManager::printQueryResult(std::vector<treeNode*>& res) {
-  // for (auto iter = res.begin(); iter != res.end(); ++iter) {
-  //   *(iter)->showPersonInfo();
-  // }
   for (const auto& per : res) {
     per->showPersonInfo();
   }
 }
-
-// int main() {
-//   familyTreeManager t_manager;
-//   cout << t_manager.getFamilyMemberNum() << endl;
-//   cout << t_manager.getFamilyAverageAge() << endl;
-//   cout << t_manager.versionsAlive() << endl;
-//   return 0;
-// }

@@ -102,6 +102,7 @@ std::vector<treeNode *> familyTree::searchPersonByFilter(
     std::function<bool(const treeNode *)> filter) {
   std::vector<treeNode *> v;
   treeNode *father = m_root;
+  std::cout << "Can we go there" << std::endl;
   while (father != NULL) {
     if (filter(father)) v.push_back(father);
     treeNode *son = father->getFirstSon();
@@ -109,7 +110,9 @@ std::vector<treeNode *> familyTree::searchPersonByFilter(
       if (filter(son)) v.push_back(son);
       son = son->getNextBrother();
     }
+    father = father->getFirstSon();
   }
+  cout << v.size() << endl;
   return v;
 }
 

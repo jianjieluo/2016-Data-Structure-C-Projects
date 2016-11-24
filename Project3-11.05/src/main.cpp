@@ -33,7 +33,6 @@ int main() {
   int temp = -1;
   personInfo info;
   while (std::cin >> choice) {
-    std::cout << "Please input a command" << std::endl;
     if (choice == 0) {
       help();
     }
@@ -136,6 +135,8 @@ int main() {
     if (!(choice >= 0 && choice <= 11)) {
       std::cout << "Invaild Input" << std::endl;
     }
+    std::cout << "-" << std::endl;
+    std::cout << "Please input a command" << std::endl;
   }
   manager->deleteFamilyTree();
   std::cout << "Good Bye" << std::endl;
