@@ -40,7 +40,7 @@ class ManagerUI {
   /**
    * search meetings by title from storage
    */
-  void queryMeetingByTitle(void);
+  void(void);
 
   /**
    * search meetings by timeinterval from storage
