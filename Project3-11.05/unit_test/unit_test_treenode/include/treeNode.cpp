@@ -41,6 +41,8 @@ void treeNode::showPersonInfo() const {
     return;
   }
   cout << "--------------------------";
+  cout << "\nVersion : " << m_version;
+  cout << "\nAge : " << m_info->age;
   cout << "\nName : " << m_info->name;
   cout << "\nBirthday : " << m_info->birthday;
   cout << "\nDeathday : " << m_info->deathday;
