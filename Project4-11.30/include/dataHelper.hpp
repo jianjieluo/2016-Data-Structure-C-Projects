@@ -7,7 +7,8 @@
 
 class dataHelper {
  public:
-  dataHelper() = default;
+  dataHelper() : m_data_path("./data/data.csv") {}
+  dataHelper(const std::string t_data_path) : m_data_path(t_data_path) {}
   ~dataHelper() {}
   /**
    * get the data from the data.csv file
@@ -24,7 +25,7 @@ class dataHelper {
   std::vector<std::string> splitEachSoptInfo(std::string t_spotInfo);
 
  private:
-  const std::string m_data_path = "./data/data.csv";
+  const std::string m_data_path;
 };
 
 #endif

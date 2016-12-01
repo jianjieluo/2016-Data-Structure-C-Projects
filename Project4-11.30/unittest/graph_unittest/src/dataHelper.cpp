@@ -4,7 +4,6 @@
 
 std::vector<std::string> dataHelper::getSpotData() {
   std::ifstream input;
-  std::cout << "Begin to get the data from " << m_data_path << std::endl;
   input.open(m_data_path);
   if (!input) {
     std::cout << "Can't read the file" << std::endl;
@@ -17,6 +16,9 @@ std::vector<std::string> dataHelper::getSpotData() {
     std::cout << buffer << std::endl;
     read_result.push_back(buffer);
   }
+
+  std::cout << "The total number of records is :" << read_result.size()
+            << std::endl;
   input.close();
   return read_result;
 }
