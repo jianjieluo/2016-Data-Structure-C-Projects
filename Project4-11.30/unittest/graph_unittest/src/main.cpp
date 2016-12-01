@@ -3,7 +3,9 @@
 #include "dataHelper.hpp"
 
 int main() {
-  dataHelper datahelper;
+  std::string temp;
+  std::cin >> temp;
+  dataHelper datahelper(temp);
 
   auto readResult = datahelper.getSpotData();
   std::cout << "The info in the result" << std::endl;

@@ -2,7 +2,7 @@
 #include <iostream>
 #include <sstream>
 
-std::vector<std::string> dataHelper::getSpotData() {
+std::vector<std::string> dataHelper::getData() {
   std::ifstream input;
   std::cout << "Begin to get the data from " << m_data_path << std::endl;
   input.open(m_data_path);
@@ -21,7 +21,7 @@ std::vector<std::string> dataHelper::getSpotData() {
   return read_result;
 }
 
-bool dataHelper::writeSpotData(const std::vector<std::string> t_info) {
+bool dataHelper::writeData(const std::vector<std::string> t_info) {
   std::ofstream output(m_data_path);
   if (!output) {
     std::cout << "Open the data file while writing back failed" << std::endl;
@@ -41,7 +41,7 @@ bool dataHelper::writeSpotData(const std::vector<std::string> t_info) {
   return true;
 }
 
-std::vector<std::string> dataHelper::splitEachSoptInfo(std::string t_spotInfo) {
+std::vector<std::string> dataHelper::splitEachInfo(std::string t_spotInfo) {
   std::istringstream ss(t_spotInfo);
   std::string buffer;
   std::vector<std::string> res;
