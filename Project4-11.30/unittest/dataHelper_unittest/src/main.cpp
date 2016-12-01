@@ -12,15 +12,17 @@ int main() {
   }
 
   std::cout << "Test the split" << std::endl;
-  auto res = datahelper.splitEachSoptInfo(readResult[0]);
-  for (const auto& per : res) {
-    std::cout << per << std::endl;
+  for (unsigned int i = 0; i < readResult.size(); ++i) {
+    auto res = datahelper.splitEachSoptInfo(readResult[i]);
+    for (const auto& per : res) {
+      std::cout << per << std::endl;
+    }
   }
 
-  std::vector<std::string> new_info{
-      "\"zhongxinhuatan\", \"5\", \"keyiyuehui\"",
-      "\"sanfanxiaoguanchang\", \"3\", \"liveshow\""};
-
-  datahelper.writeSpotData(new_info);
+  // std::vector<std::string> new_info{
+  //     "\"zhongxinhuatan\", \"5\", \"keyiyuehui\"",
+  //     "\"sanfanxiaoguanchang\", \"3\", \"liveshow\""};
+  //
+  // datahelper.writeSpotData(new_info);
   return 0;
 }
