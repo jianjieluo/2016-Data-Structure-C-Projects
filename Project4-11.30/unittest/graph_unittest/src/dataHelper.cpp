@@ -14,7 +14,8 @@ std::vector<std::string> dataHelper::getData() {
   std::string buffer;
   std::vector<std::string> read_result;
   while (getline(input, buffer)) {
-    std::cout << buffer << std::endl;
+    // 这一行在正式开发的时候需要去掉
+    // std::cout << buffer << std::endl;
     read_result.push_back(buffer);
   }
   input.close();
