@@ -21,7 +21,7 @@ class Graph {
   int m_vertexNum;
   int m_edgeNum;
   Vertex vertex[MAX];
-  int edges[MAX][MAX];
+  float edges[MAX][MAX];
   // bool visited[MAX];
 
  public:

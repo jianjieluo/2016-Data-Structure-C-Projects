@@ -49,7 +49,7 @@ void Graph::createGraph(std::string spotInfoPath, std::string edgeInfoPath) {
     // 第二个顶点的id
     int b = std::stoi(info[1]);
     // 两个定点之间的路径权值（使用的时间）
-    int c = std::stoi(info[2]);
+    float c = std::stof(info[2]);
     edges[a][b] = edges[b][a] = c;
   }
   delete helper;
