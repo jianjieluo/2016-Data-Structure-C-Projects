@@ -3,11 +3,13 @@
 #include <algorithm>
 #include <iostream>
 #include <list>
+#include <map>
 #include <string>
 #include <vector>
 using std::vector;
 using std::list;
 using std::find;
+using std::map;
 
 void Node::showInfo() const {
   std::cout << "----------------------------" << std::endl;
@@ -121,22 +123,26 @@ void Graph::queryRoutes(const std::string t_start,
     }
   }
   int sum = 0;
-  // for (auto &iter : li) {
-  //   std::cout << iter;
-  //   if (iter == end_id)
-  //     std::cout << std::endl;
-  // }
+  // 用map直接实现根据路途时间排序输出
+  map<int, std::string> m;
+  std::string path;
   for (auto iter = li.begin(); iter != li.end(); iter++) {
     if (*iter != end_id) {
       auto next = iter;
       next++;
       sum += edges[*iter][*next];
-      std::cout << *iter << vertex[*iter].name << "->";
+      path.append(vertex[*iter].name);
+      path.append("->");
     } else {
-      std::cout << vertex[end_id].name << " 花费时间 : " << sum;
-      std::cout << std::endl;
+      path.append(vertex[end_id].name);
+      path.append(" 花费时间 : ");
+      m.insert(make_pair(sum, path));
+      path = "";
       sum = 0;
     }
+  }
+  for (auto iter = m.begin(); iter != m.end(); iter++) {
+    std::cout << iter->second << iter->first << std::endl;
   }
 }
 void Graph::dfsSearch(const std::string t_spot_name, int index, bool *visited,
