@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SYSU East Campus Map</title>
+    <link rel="shortcut icon" href="../image/sysu.png">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js" charset="utf-8"></script>
+    <script src="../js/index.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <h1>SYSU EAST CAMPUS MAP</h1>
+    <div id="map"></div>
+    <div id="div1">
+        <h2>景点介绍查询</h2>
+        <form class="querySpot" action="http://localhost:8888/" method="post">
+            <span class="remind">查询景点</span>
+            <select class="spot" name="spot"></select>
+        </form>
+    </div>
+    <div id="div2">
+        <h2>步行路线查询</h2>
+        <form class="queryPaceRoute" action="http://localhost:8888/" method="post">
+            <span class="remind">起始地</span>
+            <select class="spot" name="spot"></select>
+            <span class="remind">目的地</span>
+            <select class="spot" name="spot"></select>
+        </form>
+    </div>
+    <div id="div3">
+        <h2>汽车路线查询</h2>
+        <form class="queryCarRoute" action="http://localhost:8888/" method="post">
+            <span class="remind">起始地</span>
+            <select class="spot" name="spot"></select>
+            <span class="remind">目的地</span>
+            <select class="spot" name="spot"></select>
+        </form>
+    </div>
+
+</body>
+
+</html>
