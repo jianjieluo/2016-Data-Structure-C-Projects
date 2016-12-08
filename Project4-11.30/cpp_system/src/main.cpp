@@ -10,6 +10,7 @@ int main() {
   Graph* carGraph = new Graph("./data/spot.csv", "./data/edgeCar.csv");
   int choice;
   int method;
+  std::cout << "0 for the pace map and 1 for the car map" << '\n';
   std::cin >> method;
   std::string temp, temp2;
   if (method == 0) {

@@ -60,7 +60,6 @@ void Graph::createGraph(std::string spotInfoPath, std::string edgeInfoPath) {
     int c = std::stoi(info[2]);
     edges[a][b] = edges[b][a] = c;
   }
-
   delete helper;
 }
 
@@ -95,7 +94,7 @@ void Graph::queryRoutes(const std::string t_start,
   }
   list<int> li;
   vector<int> v;
-  vector<int> last[m_vertexNum];
+  vector<int> *last = new vector<int>[m_vertexNum];
   v.push_back(start_id);
   while (!v.empty()) {
     int top = v.back();
@@ -139,8 +138,13 @@ void Graph::queryRoutes(const std::string t_start,
     }
   }
   for (auto iter = m.begin(); iter != m.end(); iter++) {
+    std::cout << "-------------------------------------------------------------"
+                 "---------------\n";
     std::cout << iter->second << iter->first << std::endl;
+    std::cout << "-------------------------------------------------------------"
+                 "---------------\n";
   }
+  delete[] last;
 }
 void Graph::dfsSearch(const std::string t_spot_name, int index, bool *visited,
                       bool &flag) const {
