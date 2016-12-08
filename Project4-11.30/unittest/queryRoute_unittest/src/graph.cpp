@@ -1,11 +1,11 @@
 #include "graph.hpp"
-#include "dataHelper.hpp"
 #include <algorithm>
 #include <iostream>
 #include <list>
 #include <map>
 #include <string>
 #include <vector>
+#include "dataHelper.hpp"
 using std::vector;
 using std::list;
 using std::find;
@@ -21,7 +21,7 @@ void Node::showInfo() const {
 
 Graph::Graph(std::string spotInfoPath, std::string edgeInfoPath) {
   createGraph(spotInfoPath, edgeInfoPath);
-} // 注意初始化
+}  // 注意初始化
 
 void Graph::createGraph(std::string spotInfoPath, std::string edgeInfoPath) {
   dataHelper *helper = new dataHelper(spotInfoPath);
@@ -85,10 +85,8 @@ void Graph::queryRoutes(const std::string t_start,
                         const std::string t_end) const {
   int start_id = -1, end_id = -1;
   for (int i = 0; i < m_vertexNum; i++) {
-    if (t_start == vertex[i].name)
-      start_id = i;
-    if (t_end == vertex[i].name)
-      end_id = i;
+    if (t_start == vertex[i].name) start_id = i;
+    if (t_end == vertex[i].name) end_id = i;
   }
 
   if (start_id == -1 || end_id == -1) {
@@ -110,8 +108,7 @@ void Graph::queryRoutes(const std::string t_start,
         last[top].push_back(i);
         haveRoute = true;
         if (i == end_id) {
-          for (auto &iter : v)
-            li.push_back(iter);
+          for (auto &iter : v) li.push_back(iter);
           v.pop_back();
         }
         break;
@@ -150,10 +147,8 @@ void Graph::dfsSearch(const std::string t_spot_name, int index, bool *visited,
   // 递归实现
   // flag用来看它是否已经找到，减少程序开销
   // 终止条件
-  if (visited[index])
-    return;
-  if (flag)
-    return;
+  if (visited[index]) return;
+  if (flag) return;
 
   // check the node
   if (t_spot_name == vertex[index].name) {

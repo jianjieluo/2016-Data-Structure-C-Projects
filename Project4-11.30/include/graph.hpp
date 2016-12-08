@@ -23,7 +23,6 @@ class Graph {
   Vertex vertex[MAX];
   float edges[MAX][MAX];
   // bool visited[MAX];
-
  public:
   Graph(std::string spotInfoPath, std::string edgeInfoPath);
   ~Graph();
