@@ -2,6 +2,9 @@
 #define GRAPH_HPP_
 
 #include <string>
+#include <iostream>
+#include <vector>
+using std::vector;
 #define MAX 50
 
 struct Node {
@@ -21,13 +24,16 @@ class Graph {
   int m_vertexNum;
   int m_edgeNum;
   Vertex vertex[MAX];
-  float edges[MAX][MAX];
+  int edges[MAX][MAX];
   // bool visited[MAX];
+
  public:
   Graph(std::string spotInfoPath, std::string edgeInfoPath);
   ~Graph();
   bool querySpot(const std::string t_spot_name) const;
   void queryRoutes(const std::string t_start, const std::string t_end) const;
+  void getRoute(vector<int> que, int sum_score, int sum_time, int limit_time);
+  void queryAllRoute(const std::string t_start, const int t_time);
 
   // just for test apoi
   // const Vertex* getVertexs() const { return vertex; }

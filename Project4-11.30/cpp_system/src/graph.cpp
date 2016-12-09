@@ -1,15 +1,20 @@
 #include "graph.hpp"
+#include "dataHelper.hpp"
 #include <algorithm>
 #include <iostream>
 #include <list>
 #include <map>
 #include <string>
 #include <vector>
-#include "dataHelper.hpp"
+#include <queue>
+#include <stack>
+using std::stack;
+using std::queue;
 using std::vector;
 using std::list;
 using std::find;
 using std::map;
+map<int, vector<int>> allRoute;
 
 void Node::showInfo() const {
   std::cout << "----------------------------" << std::endl;
@@ -21,7 +26,71 @@ void Node::showInfo() const {
 
 Graph::Graph(std::string spotInfoPath, std::string edgeInfoPath) {
   createGraph(spotInfoPath, edgeInfoPath);
-}  // 注意初始化
+} // 注意初始化
+
+void Graph::getRoute(vector<int> que, int sum_score, int sum_time, int limit_time) {
+  auto iter_b= que.end();
+  iter_b--;
+  int top =*iter_b;
+  
+  bool flag = false;
+  for (int i = 0; i < m_vertexNum; i++) {
+    if (edges[top][i] != -1 && find(que.begin(),que.end(), i) == que.end()) {
+      flag = true;
+      if (sum_time + edges[top][i] < limit_time) {
+        std::vector<int> temp = que;
+        temp.push_back(i);
+        getRoute(temp, sum_score + vertex[i].score, sum_time + edges[top][i], limit_time);
+      } else {
+        for (auto iter = que.begin(); iter != que.end(); iter++)
+        allRoute.insert(make_pair(sum_score, que));
+        // std::cout << "\nlimit_time2 : " << sum_time << std:: endl;
+      }
+    }
+  }
+  if (!flag)
+    allRoute.insert(make_pair(sum_score, que));
+}
+
+  void Graph::queryAllRoute(const std::string t_start, const int t_time) {
+    int start_id = -1;
+    for (int i = 0; i < m_vertexNum; i++) {
+      if (t_start == vertex[i].name)
+        start_id = i;
+    }
+    if (start_id == -1) {
+      std::cout << "输入地点有误，请重新输入" << std::endl;
+      return;
+    }
+    if (t_time <= 0) {
+      std::cout << "输入时间有误，请重新输入" << std::endl;
+      return;
+    }
+    vector<int> v;
+    v.push_back(start_id);
+    getRoute(v, vertex[start_id].score, 0, t_time);
+    for (auto i = allRoute.begin(); i != allRoute.end(); i++) {
+      std::cout << "总评分 ： " << i->first << " ";
+      vector<int> vec = i->second;
+      int time = 0, last = -1;
+      for (auto iter = vec.begin(); iter != vec.end(); iter++) {
+        if (last != -1)
+        time += edges[last][*iter];
+        auto temp = iter;
+        temp++;
+        if (temp != vec.end())
+        std::cout << vertex[*iter].name << "->";
+        else
+        std::cout << vertex[*iter].name;
+        if (iter != vec.begin())
+        last = *iter;
+      }
+      std::cout << " 总花费时间： " << time << std::endl;
+    }
+    allRoute.clear();
+  }
+
+
 
 void Graph::createGraph(std::string spotInfoPath, std::string edgeInfoPath) {
   dataHelper *helper = new dataHelper(spotInfoPath);
@@ -60,6 +129,8 @@ void Graph::createGraph(std::string spotInfoPath, std::string edgeInfoPath) {
     int c = std::stoi(info[2]);
     edges[a][b] = edges[b][a] = c;
   }
+  for (int i = 0; i < m_vertexNum; i++)
+  vertex[i].showInfo();
   delete helper;
 }
 
@@ -84,8 +155,10 @@ void Graph::queryRoutes(const std::string t_start,
                         const std::string t_end) const {
   int start_id = -1, end_id = -1;
   for (int i = 0; i < m_vertexNum; i++) {
-    if (t_start == vertex[i].name) start_id = i;
-    if (t_end == vertex[i].name) end_id = i;
+    if (t_start == vertex[i].name)
+      start_id = i;
+    if (t_end == vertex[i].name)
+      end_id = i;
   }
 
   if (start_id == -1 || end_id == -1) {
@@ -107,7 +180,8 @@ void Graph::queryRoutes(const std::string t_start,
         last[top].push_back(i);
         haveRoute = true;
         if (i == end_id) {
-          for (auto &iter : v) li.push_back(iter);
+          for (auto &iter : v)
+            li.push_back(iter);
           v.pop_back();
         }
         break;
@@ -138,21 +212,21 @@ void Graph::queryRoutes(const std::string t_start,
     }
   }
   for (auto iter = m.begin(); iter != m.end(); iter++) {
-    std::cout << "-------------------------------------------------------------"
-                 "---------------\n";
+    std::cout << "----------------------------------------------------------------------------\n";
     std::cout << iter->second << iter->first << std::endl;
-    std::cout << "-------------------------------------------------------------"
-                 "---------------\n";
+    std::cout << "----------------------------------------------------------------------------\n";
   }
-  delete[] last;
+  delete []last;
 }
 void Graph::dfsSearch(const std::string t_spot_name, int index, bool *visited,
                       bool &flag) const {
   // 递归实现
   // flag用来看它是否已经找到，减少程序开销
   // 终止条件
-  if (visited[index]) return;
-  if (flag) return;
+  if (visited[index])
+    return;
+  if (flag)
+    return;
 
   // check the node
   if (t_spot_name == vertex[index].name) {
